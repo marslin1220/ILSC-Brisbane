@@ -14,13 +14,14 @@
 		A2B1E6921962D98E007E83B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1E6911962D98E007E83B0 /* main.m */; };
 		A2B1E6961962D98E007E83B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1E6951962D98E007E83B0 /* AppDelegate.m */; };
 		A2B1E6991962D98E007E83B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2B1E6971962D98E007E83B0 /* Main.storyboard */; };
-		A2B1E69C1962D98E007E83B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1E69B1962D98E007E83B0 /* ViewController.m */; };
+		A2B1E69C1962D98E007E83B0 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1E69B1962D98E007E83B0 /* MenuViewController.m */; };
 		A2B1E69E1962D98E007E83B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B1E69D1962D98E007E83B0 /* Images.xcassets */; };
 		A2B1E6A51962D98E007E83B0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1E6A41962D98E007E83B0 /* XCTest.framework */; };
 		A2B1E6A61962D98E007E83B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1E6851962D98E007E83B0 /* Foundation.framework */; };
 		A2B1E6A71962D98E007E83B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1E6891962D98E007E83B0 /* UIKit.framework */; };
 		A2B1E6AF1962D98F007E83B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2B1E6AD1962D98F007E83B0 /* InfoPlist.strings */; };
 		A2B1E6B11962D98F007E83B0 /* ILSC_BrisbaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1E6B01962D98F007E83B0 /* ILSC_BrisbaneTests.m */; };
+		A2B1E6BB1962E84F007E83B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1E6BA1962E84F007E83B0 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,15 @@
 		A2B1E6941962D98E007E83B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A2B1E6951962D98E007E83B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A2B1E6981962D98E007E83B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A2B1E69A1962D98E007E83B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A2B1E69B1962D98E007E83B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A2B1E69A1962D98E007E83B0 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		A2B1E69B1962D98E007E83B0 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		A2B1E69D1962D98E007E83B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A2B1E6A31962D98E007E83B0 /* ILSC-BrisbaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ILSC-BrisbaneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B1E6A41962D98E007E83B0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A2B1E6AC1962D98E007E83B0 /* ILSC-BrisbaneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ILSC-BrisbaneTests-Info.plist"; sourceTree = "<group>"; };
 		A2B1E6AE1962D98F007E83B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A2B1E6B01962D98F007E83B0 /* ILSC_BrisbaneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ILSC_BrisbaneTests.m; sourceTree = "<group>"; };
+		A2B1E6BA1962E84F007E83B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B1E6BB1962E84F007E83B0 /* MapKit.framework in Frameworks */,
 				A2B1E6881962D98E007E83B0 /* CoreGraphics.framework in Frameworks */,
 				A2B1E68A1962D98E007E83B0 /* UIKit.framework in Frameworks */,
 				A2B1E6861962D98E007E83B0 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		A2B1E6841962D98E007E83B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2B1E6BA1962E84F007E83B0 /* MapKit.framework */,
 				A2B1E6851962D98E007E83B0 /* Foundation.framework */,
 				A2B1E6871962D98E007E83B0 /* CoreGraphics.framework */,
 				A2B1E6891962D98E007E83B0 /* UIKit.framework */,
@@ -115,8 +119,8 @@
 				A2B1E6941962D98E007E83B0 /* AppDelegate.h */,
 				A2B1E6951962D98E007E83B0 /* AppDelegate.m */,
 				A2B1E6971962D98E007E83B0 /* Main.storyboard */,
-				A2B1E69A1962D98E007E83B0 /* ViewController.h */,
-				A2B1E69B1962D98E007E83B0 /* ViewController.m */,
+				A2B1E69A1962D98E007E83B0 /* MenuViewController.h */,
+				A2B1E69B1962D98E007E83B0 /* MenuViewController.m */,
 				A2B1E69D1962D98E007E83B0 /* Images.xcassets */,
 				A2B1E68C1962D98E007E83B0 /* Supporting Files */,
 			);
@@ -249,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2B1E69C1962D98E007E83B0 /* ViewController.m in Sources */,
+				A2B1E69C1962D98E007E83B0 /* MenuViewController.m in Sources */,
 				A2B1E6961962D98E007E83B0 /* AppDelegate.m in Sources */,
 				A2B1E6921962D98E007E83B0 /* main.m in Sources */,
 			);

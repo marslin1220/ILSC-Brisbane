@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="833" y="99"/>
         </scene>
-        <!--View Controller - Map-->
+        <!--Map View Controller - Map-->
         <scene sceneID="TVh-D2-v5I">
             <objects>
-                <viewController id="f0J-o7-oGr" sceneMemberID="viewController">
+                <viewController id="f0J-o7-oGr" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UVb-Yv-uTg"/>
                         <viewControllerLayoutGuide type="bottom" id="h48-Rn-0X4"/>
@@ -85,6 +85,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="WHa-KK-4Kp"/>
+                    <connections>
+                        <outlet property="mapView" destination="E4F-lE-e4F" id="vNc-BK-A3K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcr-hG-Xbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

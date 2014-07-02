@@ -22,6 +22,7 @@
 		A2B1E6AF1962D98F007E83B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2B1E6AD1962D98F007E83B0 /* InfoPlist.strings */; };
 		A2B1E6B11962D98F007E83B0 /* ILSC_BrisbaneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1E6B01962D98F007E83B0 /* ILSC_BrisbaneTests.m */; };
 		A2B1E6BB1962E84F007E83B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1E6BA1962E84F007E83B0 /* MapKit.framework */; };
+		A2B1E6BF1962ED4F007E83B0 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1E6BE1962ED4F007E83B0 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		A2B1E6AE1962D98F007E83B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A2B1E6B01962D98F007E83B0 /* ILSC_BrisbaneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ILSC_BrisbaneTests.m; sourceTree = "<group>"; };
 		A2B1E6BA1962E84F007E83B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A2B1E6BD1962ED4F007E83B0 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		A2B1E6BE1962ED4F007E83B0 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +119,8 @@
 		A2B1E68B1962D98E007E83B0 /* ILSC-Brisbane */ = {
 			isa = PBXGroup;
 			children = (
-				A2B1E6941962D98E007E83B0 /* AppDelegate.h */,
-				A2B1E6951962D98E007E83B0 /* AppDelegate.m */,
+				A2B1E6BC1962ECA2007E83B0 /* ViewController */,
 				A2B1E6971962D98E007E83B0 /* Main.storyboard */,
-				A2B1E69A1962D98E007E83B0 /* MenuViewController.h */,
-				A2B1E69B1962D98E007E83B0 /* MenuViewController.m */,
-				A2B1E69D1962D98E007E83B0 /* Images.xcassets */,
 				A2B1E68C1962D98E007E83B0 /* Supporting Files */,
 			);
 			path = "ILSC-Brisbane";
@@ -130,6 +129,9 @@
 		A2B1E68C1962D98E007E83B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A2B1E6941962D98E007E83B0 /* AppDelegate.h */,
+				A2B1E6951962D98E007E83B0 /* AppDelegate.m */,
+				A2B1E69D1962D98E007E83B0 /* Images.xcassets */,
 				A2B1E68D1962D98E007E83B0 /* ILSC-Brisbane-Info.plist */,
 				A2B1E68E1962D98E007E83B0 /* InfoPlist.strings */,
 				A2B1E6911962D98E007E83B0 /* main.m */,
@@ -154,6 +156,17 @@
 				A2B1E6AD1962D98F007E83B0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2B1E6BC1962ECA2007E83B0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A2B1E69A1962D98E007E83B0 /* MenuViewController.h */,
+				A2B1E69B1962D98E007E83B0 /* MenuViewController.m */,
+				A2B1E6BD1962ED4F007E83B0 /* MapViewController.h */,
+				A2B1E6BE1962ED4F007E83B0 /* MapViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +269,7 @@
 				A2B1E69C1962D98E007E83B0 /* MenuViewController.m in Sources */,
 				A2B1E6961962D98E007E83B0 /* AppDelegate.m in Sources */,
 				A2B1E6921962D98E007E83B0 /* main.m in Sources */,
+				A2B1E6BF1962ED4F007E83B0 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

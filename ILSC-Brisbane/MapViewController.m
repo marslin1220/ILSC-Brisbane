@@ -11,6 +11,8 @@
 #define REGION_DISTANCE_IN_METERS 1000
 #define ANNOTATION_ID_COLLEGE @"annotation-id_college"
 
+#define ILSC_BRISBANE_OFFICIAL_LINK @"http://www.ilsc.com.au/ilsc-brisbane.aspx"
+
 @interface MapViewController ()
 
 @property (nonatomic) CLLocationCoordinate2D mapCenterCoordinate;
@@ -62,7 +64,7 @@
 
     // Because this is an iOS app, add the detail disclosure button to display details about the annotation in another view.
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
+    [rightButton addTarget:self action:@selector(calloutRightButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
     customPinView.rightCalloutAccessoryView = rightButton;
 
     // Add a custom image to the left side of the callout.
@@ -71,6 +73,11 @@
     customPinView.leftCalloutAccessoryView = myCustomImage;
 
     return customPinView;
+}
+
+- (void)calloutRightButtonTouched:(UIButton *)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:ILSC_BRISBANE_OFFICIAL_LINK]];
 }
 
 @end

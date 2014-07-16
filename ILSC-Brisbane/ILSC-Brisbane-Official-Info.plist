@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Official web page link</key>
+	<string>http://www.ilsc.com.au/ilsc-brisbane.aspx</string>
+	<key>Geo location</key>
+	<dict>
+		<key>longitude</key>
+		<real>153.027168</real>
+		<key>latitude</key>
+		<real>-27.466414</real>
+	</dict>
+</dict>
+</plist>

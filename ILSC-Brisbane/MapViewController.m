@@ -7,27 +7,46 @@
 //
 
 #import "MapViewController.h"
+#import "PropertyListReader.h"
 
 #define REGION_DISTANCE_IN_METERS 1000
 #define ANNOTATION_ID_COLLEGE @"annotation-id_college"
 
-#define ILSC_BRISBANE_OFFICIAL_LINK @"http://www.ilsc.com.au/ilsc-brisbane.aspx"
+#define ILSC_BRISBANE_OFFICIAL_LINK_KEY @"Official web page link"
+#define ILSC_BRISBANE_OFFICIAL_LOCATION_KEY @"Geo location"
+#define OFFICIAL_INFO_PROPERT_YLIST @"ILSC-Brisbane-Official-Info"
 
 @interface MapViewController ()
 
 @property (nonatomic) CLLocationCoordinate2D mapCenterCoordinate;
+@property (nonatomic) NSDictionary *propertyList;
 
 @end
 
 @implementation MapViewController
 
+#pragma mark - Member Accessor
+
 - (CLLocationCoordinate2D)mapCenterCoordinate {
     CLLocationCoordinate2D centerLocation;
-    centerLocation.latitude = -27.466414;
-    centerLocation.longitude= 153.027168;
+
+    NSDictionary *geoLocation = [self.propertyList objectForKey:ILSC_BRISBANE_OFFICIAL_LOCATION_KEY];
+    centerLocation.latitude = [[geoLocation objectForKey:@"latitude"] doubleValue];
+    centerLocation.longitude= [[geoLocation objectForKey:@"longitude"] doubleValue];
 
     return centerLocation;
 }
+
+- (NSDictionary *)propertyList
+{
+    if (!_propertyList) {
+        _propertyList = [PropertyListReader getDataByPropertyListFileName:OFFICIAL_INFO_PROPERT_YLIST];
+    }
+
+    return _propertyList;
+}
+
+#pragma mark - UI Life Cycle
 
 - (void)viewWillAppear:(BOOL)animated {
     [self initMapView];
@@ -77,7 +96,8 @@
 
 - (void)calloutRightButtonTouched:(UIButton *)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:ILSC_BRISBANE_OFFICIAL_LINK]];
+    NSString *officialLink = [self.propertyList objectForKey:ILSC_BRISBANE_OFFICIAL_LINK_KEY];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:officialLink]];
 }
 
 @end

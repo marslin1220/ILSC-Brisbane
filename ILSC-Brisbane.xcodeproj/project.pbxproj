@@ -17,6 +17,8 @@
 		A297296C196CD84000790428 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297296B196CD84000790428 /* Security.framework */; };
 		A297296E196CD84800790428 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297296D196CD84800790428 /* StoreKit.framework */; };
 		A2972970196CD85000790428 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297296F196CD85000790428 /* SystemConfiguration.framework */; };
+		A2ADA74E19760BFC008DC3F7 /* PropertyListReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A2ADA74D19760BFC008DC3F7 /* PropertyListReader.m */; };
+		A2ADA7501976116B008DC3F7 /* ILSC-Brisbane-Official-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2ADA74F1976116B008DC3F7 /* ILSC-Brisbane-Official-Info.plist */; };
 		A2B1E6861962D98E007E83B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1E6851962D98E007E83B0 /* Foundation.framework */; };
 		A2B1E6881962D98E007E83B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1E6871962D98E007E83B0 /* CoreGraphics.framework */; };
 		A2B1E68A1962D98E007E83B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1E6891962D98E007E83B0 /* UIKit.framework */; };
@@ -56,6 +58,9 @@
 		A297296B196CD84000790428 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A297296D196CD84800790428 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A297296F196CD85000790428 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A2ADA74C19760BFC008DC3F7 /* PropertyListReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyListReader.h; sourceTree = "<group>"; };
+		A2ADA74D19760BFC008DC3F7 /* PropertyListReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyListReader.m; sourceTree = "<group>"; };
+		A2ADA74F1976116B008DC3F7 /* ILSC-Brisbane-Official-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ILSC-Brisbane-Official-Info.plist"; sourceTree = "<group>"; };
 		A2B1E6821962D98E007E83B0 /* ILSC-Brisbane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ILSC-Brisbane.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B1E6851962D98E007E83B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A2B1E6871962D98E007E83B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2ADA74B19760B9E008DC3F7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A2ADA74C19760BFC008DC3F7 /* PropertyListReader.h */,
+				A2ADA74D19760BFC008DC3F7 /* PropertyListReader.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		A2B1E6791962D98E007E83B0 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +173,7 @@
 		A2B1E68B1962D98E007E83B0 /* ILSC-Brisbane */ = {
 			isa = PBXGroup;
 			children = (
+				A2ADA74B19760B9E008DC3F7 /* Utility */,
 				A2B1E6BC1962ECA2007E83B0 /* ViewController */,
 				A2B1E6971962D98E007E83B0 /* Main.storyboard */,
 				A2B1E68C1962D98E007E83B0 /* Supporting Files */,
@@ -176,6 +191,7 @@
 				A2B1E68E1962D98E007E83B0 /* InfoPlist.strings */,
 				A2B1E6911962D98E007E83B0 /* main.m */,
 				A2B1E6931962D98E007E83B0 /* ILSC-Brisbane-Prefix.pch */,
+				A2ADA74F1976116B008DC3F7 /* ILSC-Brisbane-Official-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2ADA7501976116B008DC3F7 /* ILSC-Brisbane-Official-Info.plist in Resources */,
 				A2B1E69E1962D98E007E83B0 /* Images.xcassets in Resources */,
 				A2B1E6901962D98E007E83B0 /* InfoPlist.strings in Resources */,
 				A2B1E6991962D98E007E83B0 /* Main.storyboard in Resources */,
@@ -309,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2ADA74E19760BFC008DC3F7 /* PropertyListReader.m in Sources */,
 				A2B1E69C1962D98E007E83B0 /* MenuViewController.m in Sources */,
 				A2B1E6961962D98E007E83B0 /* AppDelegate.m in Sources */,
 				A2B1E6921962D98E007E83B0 /* main.m in Sources */,

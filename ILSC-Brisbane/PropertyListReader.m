@@ -23,7 +23,7 @@
                                                 format:&format
                                                 error:&errorDesc];
     if (!properties) {
-        NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
+        NSLog(@"Error reading plist: %@, format: %u", errorDesc, format);
     }
 
     return properties;

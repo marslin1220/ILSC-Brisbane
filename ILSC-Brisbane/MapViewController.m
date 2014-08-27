@@ -11,6 +11,7 @@
 
 #define REGION_DISTANCE_IN_METERS 1000
 #define ANNOTATION_ID_COLLEGE @"annotation-id_college"
+#define ANNOTATION_ID_USER @"annotation-id_user"
 
 #define ILSC_BRISBANE_OFFICIAL_LINK_KEY @"Official web page link"
 #define ILSC_BRISBANE_OFFICIAL_LOCATION_KEY @"Geo location"
@@ -20,6 +21,7 @@
 
 @property (nonatomic) CLLocationCoordinate2D mapCenterCoordinate;
 @property (nonatomic) NSDictionary *propertyList;
+@property (nonatomic) MKMapItem *ilscBrisbaneMapItem;
 
 @end
 
@@ -46,11 +48,24 @@
     return _propertyList;
 }
 
+- (MKMapItem *)ilscBrisbaneMapItem
+{
+    if (!_ilscBrisbaneMapItem) {
+
+        MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:self.mapCenterCoordinate
+                                                       addressDictionary:nil];
+        _ilscBrisbaneMapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+    }
+
+    return _ilscBrisbaneMapItem;
+}
+
 #pragma mark - UI Life Cycle
 
 - (void)viewWillAppear:(BOOL)animated {
     [self initMapView];
     [self putAnnotation];
+    [self addRouteToMap];
 }
 
 - (void)initMapView {
@@ -59,6 +74,7 @@
     [self.mapView setRegion:viewRegion animated:YES];
     [self.mapView setZoomEnabled:YES];
     [self.mapView setDelegate:self];
+    [self.mapView setShowsUserLocation:YES];
 }
 
 - (void)putAnnotation {
@@ -70,20 +86,43 @@
     [self.mapView addAnnotation:annotation];
 }
 
+#pragma mark - Add Annotation
+
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    // Try to dequeue an existing pin view first (code not shown).
+    MKPinAnnotationView *customPinView;
+
+    if ([self isCollegeAnnotation:annotation]) {
+        customPinView = [self getCollegeAnnotationViewWithAnnotation:annotation];
+    }
+    else {
+        customPinView = [self getUserAnnotationViewWithAnnotation:annotation];
+    }
+
+    return customPinView;
+}
+
+- (BOOL)isCollegeAnnotation:(id <MKAnnotation>)annotation
+{
+    return [[annotation title] isEqualToString:@"ILSC-Brisbane"];
+}
+
+- (MKPinAnnotationView *)getCollegeAnnotationViewWithAnnotation:(id <MKAnnotation>)annotation
+{
+    MKPinAnnotationView *customPinView;
 
     // If no pin view already exists, create a new one.
-    MKPinAnnotationView *customPinView = [[MKPinAnnotationView alloc]
-                                          initWithAnnotation:annotation reuseIdentifier:ANNOTATION_ID_COLLEGE];
+    customPinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation
+                                                    reuseIdentifier:ANNOTATION_ID_COLLEGE];
     customPinView.pinColor = MKPinAnnotationColorRed;
     customPinView.animatesDrop = YES;
     customPinView.canShowCallout = YES;
 
     // Because this is an iOS app, add the detail disclosure button to display details about the annotation in another view.
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    [rightButton addTarget:self action:@selector(calloutRightButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    [rightButton addTarget:self
+                    action:@selector(calloutRightButtonTouched:)
+          forControlEvents:UIControlEventTouchUpInside];
     customPinView.rightCalloutAccessoryView = rightButton;
 
     // Add a custom image to the left side of the callout.
@@ -94,10 +133,65 @@
     return customPinView;
 }
 
+- (MKPinAnnotationView *)getUserAnnotationViewWithAnnotation:(id <MKAnnotation>)annotation
+{
+    MKPinAnnotationView *customPinView;
+    customPinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation
+                                                    reuseIdentifier:ANNOTATION_ID_USER];
+    customPinView.pinColor = MKPinAnnotationColorGreen;
+    customPinView.animatesDrop = YES;
+    customPinView.canShowCallout = NO;
+
+    return customPinView;
+}
+
 - (void)calloutRightButtonTouched:(UIButton *)sender
 {
     NSString *officialLink = [self.propertyList objectForKey:ILSC_BRISBANE_OFFICIAL_LINK_KEY];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:officialLink]];
+}
+
+#pragma mark - Add Route
+
+- (void)addRouteToMap
+{
+    MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
+
+    request.source = [MKMapItem mapItemForCurrentLocation];
+
+    request.destination = self.ilscBrisbaneMapItem;
+    MKDirections *directions = [[MKDirections alloc] initWithRequest:request];
+
+    [directions calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
+         if (error) {
+             NSLog(@"Error calculating direction: %@", error);
+         } else {
+             [self showRoute:response];
+         }
+     }];
+}
+
+- (void)showRoute:(MKDirectionsResponse *)response
+{
+    for (MKRoute *route in response.routes)
+    {
+        [self.mapView addOverlay:route.polyline
+                           level:MKOverlayLevelAboveRoads];
+    }
+}
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView
+            rendererForOverlay:(id < MKOverlay >)overlay
+{
+    MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithOverlay:overlay];
+    renderer.strokeColor = [UIColor blueColor];
+    renderer.lineWidth = 5.0;
+
+    [self.mapView setVisibleMapRect:[overlay boundingMapRect]
+                        edgePadding:UIEdgeInsetsMake(30.0, 30.0, 30.0, 30.0)
+                           animated:YES];
+
+    return renderer;
 }
 
 @end

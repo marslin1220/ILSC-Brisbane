@@ -27,6 +27,8 @@
 		A22B968519AD85C700D3BDC4 /* MBPolygonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B966719AD85C700D3BDC4 /* MBPolygonView.m */; };
 		A22B968619AD85C700D3BDC4 /* CKCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B967119AD85C700D3BDC4 /* CKCalendarViewController.m */; };
 		A22B968719AD85C700D3BDC4 /* CKCalendarViewControllerInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B967319AD85C700D3BDC4 /* CKCalendarViewControllerInternal.m */; };
+		A22B968A19ADCDF600D3BDC4 /* ActivitiCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */; };
+		A22B968D19AE147E00D3BDC4 /* AcademicCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */; };
 		A297295E196CD7C000790428 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295D196CD7C000790428 /* Parse.framework */; };
 		A2972960196CD7FF00790428 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295F196CD7FF00790428 /* AudioToolbox.framework */; };
 		A2972962196CD80900790428 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2972961196CD80900790428 /* CFNetwork.framework */; };
@@ -116,6 +118,10 @@
 		A22B967119AD85C700D3BDC4 /* CKCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarViewController.m; sourceTree = "<group>"; };
 		A22B967219AD85C700D3BDC4 /* CKCalendarViewControllerInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarViewControllerInternal.h; sourceTree = "<group>"; };
 		A22B967319AD85C700D3BDC4 /* CKCalendarViewControllerInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarViewControllerInternal.m; sourceTree = "<group>"; };
+		A22B968819ADCDF600D3BDC4 /* ActivitiCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiCalendarViewController.h; sourceTree = "<group>"; };
+		A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiCalendarViewController.m; sourceTree = "<group>"; };
+		A22B968B19AE147D00D3BDC4 /* AcademicCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcademicCalendarViewController.h; sourceTree = "<group>"; };
+		A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcademicCalendarViewController.m; sourceTree = "<group>"; };
 		A297295D196CD7C000790428 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A297295F196CD7FF00790428 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A2972961196CD80900790428 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -422,6 +428,10 @@
 		A2B1E6BC1962ECA2007E83B0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A22B968819ADCDF600D3BDC4 /* ActivitiCalendarViewController.h */,
+				A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */,
+				A22B968B19AE147D00D3BDC4 /* AcademicCalendarViewController.h */,
+				A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */,
 				A2B1E69A1962D98E007E83B0 /* MenuViewController.h */,
 				A2B1E69B1962D98E007E83B0 /* MenuViewController.m */,
 				A2B1E6BD1962ED4F007E83B0 /* MapViewController.h */,
@@ -535,6 +545,8 @@
 				A22B967D19AD85C700D3BDC4 /* UIColor+HexString.m in Sources */,
 				A22B967819AD85C700D3BDC4 /* NSCalendar+Ranges.m in Sources */,
 				A22B967F19AD85C700D3BDC4 /* UIView+Border.m in Sources */,
+				A22B968A19ADCDF600D3BDC4 /* ActivitiCalendarViewController.m in Sources */,
+				A22B968D19AE147E00D3BDC4 /* AcademicCalendarViewController.m in Sources */,
 				A22B967419AD85C700D3BDC4 /* NSCalendar+Components.m in Sources */,
 				A22B967E19AD85C700D3BDC4 /* UIView+AnimatedFrame.m in Sources */,
 				A2ADA74E19760BFC008DC3F7 /* PropertyListReader.m in Sources */,

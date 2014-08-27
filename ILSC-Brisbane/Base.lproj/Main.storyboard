@@ -51,6 +51,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="F1f-MA-drV" kind="push" id="Dzv-hD-C5V"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="XOH-53-cMl" style="IBUITableViewCellStyleDefault" id="TbY-Go-7iN">
                                         <rect key="frame" x="0.0" y="174" width="320" height="44"/>
@@ -68,6 +71,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Q4l-Wl-JfU" kind="push" id="qgy-56-sIn"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="QvW-fT-4zm" style="IBUITableViewCellStyleDefault" id="PLb-6d-6j6">
                                         <rect key="frame" x="0.0" y="218" width="320" height="44"/>
@@ -168,6 +174,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcr-hG-Xbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1284" y="99"/>
+        </scene>
+        <!--Activiti Calendar View Controller - Activity Calendar-->
+        <scene sceneID="tKJ-bP-6rk">
+            <objects>
+                <viewController id="Q4l-Wl-JfU" customClass="ActivitiCalendarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vso-8i-63y"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uhh-YO-DGz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eHP-DO-303">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Activity Calendar" id="JbA-sI-skX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOv-oY-xvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="1492"/>
         </scene>
         <!--Table View Controller - Information-->
         <scene sceneID="U8l-G4-df3">
@@ -284,7 +310,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaD-Iy-9oh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="812"/>
+            <point key="canvasLocation" x="1284" y="2183"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A2T-pY-gfy">
@@ -303,6 +329,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfn-xp-woa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="307" y="99"/>
+        </scene>
+        <!--Academic Calendar View Controller - Academic Calendar-->
+        <scene sceneID="DA2-Xp-LFB">
+            <objects>
+                <viewController id="F1f-MA-drV" customClass="AcademicCalendarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DMO-mH-W2v"/>
+                        <viewControllerLayoutGuide type="bottom" id="A8Z-YF-h6K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hoN-pe-UBP">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Academic Calendar" id="sdH-69-Pa1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ty-OR-d3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="785"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -6,11 +6,20 @@
 //  Copyright (c) 2014年 marstudio. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "AcademicCalendarViewController.h"
+#import "NSCalendar+DateComparison.h"
+
+#define KEY_TITLE @"title"
+#define KEY_SUBTITLE @"subtitle"
+#define KEY_DATE @"date"
+
+#define CLASS_ACADEMIC_CALENDAR_EVENT @"AcademicCalendarEvent"
 
 @interface AcademicCalendarViewController ()
 
 @property (nonatomic) CKCalendarView *calendarView;
+@property (nonatomic) NSArray *calendarEventGroup;
 
 @end
 
@@ -19,38 +28,69 @@
 #pragma mark - Init Object Memeber
 - (CKCalendarView *)calendarView
 {
-    if (!_calendarView) {
-        _calendarView = [CKCalendarView new];
+  if (!_calendarView) {
+    _calendarView = [CKCalendarView new];
 
-        [_calendarView setDelegate:self];
-        [_calendarView setDataSource:self];
-    }
+    [_calendarView setDelegate:self];
+    [_calendarView setDataSource:self];
+  }
 
-    return _calendarView;
+  return _calendarView;
 }
 
 #pragma mark - UI Life Cycle
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    // Custom initialization
+  }
+  return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  [super viewDidLoad];
+  // Do any additional setup after loading the view.
 
-    [[self view] addSubview:self.calendarView];
+  [[self view] addSubview:self.calendarView];
+  [self fetchEventsForCalendar];
+
+}
+
+- (void)fetchEventsForCalendar
+{
+  PFQuery *query = [PFQuery queryWithClassName:CLASS_ACADEMIC_CALENDAR_EVENT];
+  [query whereKey:KEY_DATE greaterThanOrEqualTo:self.calendarView.firstVisibleDate];
+  [query whereKey:KEY_DATE lessThanOrEqualTo:self.calendarView.lastVisibleDate];
+
+  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    if (error) {
+      NSLog(@"Error: %@ %@", error, [error userInfo]);
+      return;
+    }
+
+    self.calendarEventGroup = objects;
+    [self.calendarView reload];
+  }];
 }
 
 #pragma mark - Implement CKCalendarDataSource
 - (NSArray *)calendarView:(CKCalendarView *)calendarView eventsForDate:(NSDate *)date
 {
-    return nil;
+  NSMutableArray *ckCalendarEventGroup = [[NSMutableArray alloc] init];
+  NSCalendar *currentCalendar = [NSCalendar currentCalendar];
+
+  for (PFObject *object in self.calendarEventGroup) {
+    if ([currentCalendar date:date isSameDayAs:[object objectForKey:KEY_DATE]]) {
+      CKCalendarEvent *ckCalendarEvent = [[CKCalendarEvent alloc] init];
+      ckCalendarEvent.title = [object objectForKey:KEY_TITLE];
+
+      [ckCalendarEventGroup addObject:ckCalendarEvent];
+    }
+  }
+
+  return ckCalendarEventGroup;
 }
 
 #pragma mark - Implement CKCalendarViewDelegate
@@ -61,7 +101,7 @@
 
 - (void)calendarView:(CKCalendarView *)calendarView didSelectDate:(NSDate *)date
 {
-    
+
 }
 
 @end

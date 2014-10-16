@@ -39,6 +39,7 @@
 		A297296C196CD84000790428 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297296B196CD84000790428 /* Security.framework */; };
 		A297296E196CD84800790428 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297296D196CD84800790428 /* StoreKit.framework */; };
 		A2972970196CD85000790428 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297296F196CD85000790428 /* SystemConfiguration.framework */; };
+		A29E83B319EF917B007E4CF0 /* InformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29E83B219EF917B007E4CF0 /* InformationTableViewController.m */; };
 		A2ADA74E19760BFC008DC3F7 /* PropertyListReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A2ADA74D19760BFC008DC3F7 /* PropertyListReader.m */; };
 		A2ADA7501976116B008DC3F7 /* ILSC-Brisbane-Official-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2ADA74F1976116B008DC3F7 /* ILSC-Brisbane-Official-Info.plist */; };
 		A2B1E6861962D98E007E83B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1E6851962D98E007E83B0 /* Foundation.framework */; };
@@ -132,6 +133,8 @@
 		A297296B196CD84000790428 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A297296D196CD84800790428 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A297296F196CD85000790428 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A29E83B119EF917B007E4CF0 /* InformationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationTableViewController.h; sourceTree = "<group>"; };
+		A29E83B219EF917B007E4CF0 /* InformationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationTableViewController.m; sourceTree = "<group>"; };
 		A2ADA74C19760BFC008DC3F7 /* PropertyListReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyListReader.h; sourceTree = "<group>"; };
 		A2ADA74D19760BFC008DC3F7 /* PropertyListReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyListReader.m; sourceTree = "<group>"; };
 		A2ADA74F1976116B008DC3F7 /* ILSC-Brisbane-Official-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ILSC-Brisbane-Official-Info.plist"; sourceTree = "<group>"; };
@@ -428,14 +431,16 @@
 		A2B1E6BC1962ECA2007E83B0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A22B968819ADCDF600D3BDC4 /* ActivitiCalendarViewController.h */,
-				A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */,
-				A22B968B19AE147D00D3BDC4 /* AcademicCalendarViewController.h */,
-				A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */,
 				A2B1E69A1962D98E007E83B0 /* MenuViewController.h */,
 				A2B1E69B1962D98E007E83B0 /* MenuViewController.m */,
 				A2B1E6BD1962ED4F007E83B0 /* MapViewController.h */,
 				A2B1E6BE1962ED4F007E83B0 /* MapViewController.m */,
+				A22B968819ADCDF600D3BDC4 /* ActivitiCalendarViewController.h */,
+				A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */,
+				A22B968B19AE147D00D3BDC4 /* AcademicCalendarViewController.h */,
+				A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */,
+				A29E83B119EF917B007E4CF0 /* InformationTableViewController.h */,
+				A29E83B219EF917B007E4CF0 /* InformationTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -541,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A29E83B319EF917B007E4CF0 /* InformationTableViewController.m in Sources */,
 				A22B968119AD85C700D3BDC4 /* CKCalendarEvent.m in Sources */,
 				A22B967D19AD85C700D3BDC4 /* UIColor+HexString.m in Sources */,
 				A22B967819AD85C700D3BDC4 /* NSCalendar+Ranges.m in Sources */,

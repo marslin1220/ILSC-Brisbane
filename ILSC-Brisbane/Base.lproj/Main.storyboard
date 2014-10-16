@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jX0-IG-2gU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jX0-IG-2gU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Menu View Controller - ILSC-Brisbane-->
+        <!--ILSC-Brisbane-->
         <scene sceneID="Gh8-9P-QoX">
             <objects>
                 <tableViewController id="0a3-wV-BrS" customClass="MenuViewController" sceneMemberID="viewController">
@@ -147,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="833" y="99"/>
         </scene>
-        <!--Map View Controller - Map-->
+        <!--Map-->
         <scene sceneID="TVh-D2-v5I">
             <objects>
                 <viewController id="f0J-o7-oGr" customClass="MapViewController" sceneMemberID="viewController">
@@ -161,7 +162,6 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="E4F-lE-e4F">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -175,7 +175,7 @@
             </objects>
             <point key="canvasLocation" x="1284" y="99"/>
         </scene>
-        <!--Activiti Calendar View Controller - Activity Calendar-->
+        <!--Activity Calendar-->
         <scene sceneID="tKJ-bP-6rk">
             <objects>
                 <viewController id="Q4l-Wl-JfU" customClass="ActivitiCalendarViewController" sceneMemberID="viewController">
@@ -195,7 +195,7 @@
             </objects>
             <point key="canvasLocation" x="1284" y="1492"/>
         </scene>
-        <!--Table View Controller - Information-->
+        <!--Information-->
         <scene sceneID="U8l-G4-df3">
             <objects>
                 <tableViewController id="kzX-sp-VlS" sceneMemberID="viewController">
@@ -330,7 +330,7 @@
             </objects>
             <point key="canvasLocation" x="307" y="99"/>
         </scene>
-        <!--Academic Calendar View Controller - Academic Calendar-->
+        <!--Academic Calendar-->
         <scene sceneID="DA2-Xp-LFB">
             <objects>
                 <viewController id="F1f-MA-drV" customClass="AcademicCalendarViewController" sceneMemberID="viewController">

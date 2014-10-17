@@ -22,6 +22,7 @@
 @property (nonatomic) CLLocationCoordinate2D mapCenterCoordinate;
 @property (nonatomic) NSDictionary *propertyList;
 @property (nonatomic) MKMapItem *ilscBrisbaneMapItem;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -60,12 +61,33 @@
     return _ilscBrisbaneMapItem;
 }
 
+- (CLLocationManager *)locationManager
+{
+  if (!_locationManager) {
+    _locationManager = [[CLLocationManager alloc] init];
+  }
+
+  return _locationManager;
+}
+
 #pragma mark - UI Life Cycle
 
-- (void)viewWillAppear:(BOOL)animated {
-    [self initMapView];
-    [self putAnnotation];
-    [self addRouteToMap];
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+
+  [self requestLocationAuthorization];
+
+  [self initMapView];
+  [self putAnnotation];
+  [self addRouteToMap];
+}
+
+- (void)requestLocationAuthorization
+{
+  if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+    [self.locationManager requestWhenInUseAuthorization];
+  }
 }
 
 - (void)initMapView {

@@ -213,8 +213,7 @@
             rendererForOverlay:(id < MKOverlay >)overlay
 {
     MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithOverlay:overlay];
-    renderer.strokeColor = [UIColor blueColor];
-    renderer.lineWidth = 5.0;
+    renderer.strokeColor = [UIColor orangeColor];
 
     [self.mapView setVisibleMapRect:[overlay boundingMapRect]
                         edgePadding:UIEdgeInsetsMake(30.0, 30.0, 30.0, 30.0)

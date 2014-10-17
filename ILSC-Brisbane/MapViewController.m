@@ -79,6 +79,7 @@
   [self requestLocationAuthorization];
 
   [self initMapView];
+  [self initToolbar];
   [self putAnnotation];
   [self addRouteToMap];
 }
@@ -97,6 +98,12 @@
     [self.mapView setZoomEnabled:YES];
     [self.mapView setDelegate:self];
     [self.mapView setShowsUserLocation:YES];
+}
+
+- (void)initToolbar
+{
+  MKUserTrackingBarButtonItem *trackingItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
+  [self.toolbar setItems:@[trackingItem]];
 }
 
 - (void)putAnnotation {

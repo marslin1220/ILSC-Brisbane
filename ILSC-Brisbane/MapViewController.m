@@ -22,6 +22,7 @@
 @property (nonatomic) CLLocationCoordinate2D mapCenterCoordinate;
 @property (nonatomic) NSDictionary *propertyList;
 @property (nonatomic) MKMapItem *ilscBrisbaneMapItem;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -60,12 +61,34 @@
     return _ilscBrisbaneMapItem;
 }
 
+- (CLLocationManager *)locationManager
+{
+  if (!_locationManager) {
+    _locationManager = [[CLLocationManager alloc] init];
+  }
+
+  return _locationManager;
+}
+
 #pragma mark - UI Life Cycle
 
-- (void)viewWillAppear:(BOOL)animated {
-    [self initMapView];
-    [self putAnnotation];
-    [self addRouteToMap];
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+
+  [self requestLocationAuthorization];
+
+  [self initMapView];
+  [self initToolbar];
+  [self putAnnotation];
+  [self addRouteToMap];
+}
+
+- (void)requestLocationAuthorization
+{
+  if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+    [self.locationManager requestWhenInUseAuthorization];
+  }
 }
 
 - (void)initMapView {
@@ -75,6 +98,12 @@
     [self.mapView setZoomEnabled:YES];
     [self.mapView setDelegate:self];
     [self.mapView setShowsUserLocation:YES];
+}
+
+- (void)initToolbar
+{
+  MKUserTrackingBarButtonItem *trackingItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
+  [self.toolbar setItems:@[trackingItem]];
 }
 
 - (void)putAnnotation {
@@ -184,8 +213,7 @@
             rendererForOverlay:(id < MKOverlay >)overlay
 {
     MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc] initWithOverlay:overlay];
-    renderer.strokeColor = [UIColor blueColor];
-    renderer.lineWidth = 5.0;
+    renderer.strokeColor = [UIColor orangeColor];
 
     [self.mapView setVisibleMapRect:[overlay boundingMapRect]
                         edgePadding:UIEdgeInsetsMake(30.0, 30.0, 30.0, 30.0)

@@ -20,6 +20,8 @@
 
 @property (nonatomic) CKCalendarView *calendarView;
 @property (nonatomic) NSArray *calendarEventGroup;
+@property (nonatomic) NSDate *firstFetchedDate;
+@property (nonatomic) NSDate *lastFetchedDate;
 
 @end
 
@@ -51,6 +53,10 @@
 
 - (void)fetchEventsForCalendar
 {
+  if (![self needToFetchEvents]) {
+    return;
+  }
+
   PFQuery *query = [PFQuery queryWithClassName:CLASS_ACTIVITY_CALENDAR_EVENT];
   [query whereKey:KEY_DATE greaterThanOrEqualTo:self.calendarView.firstVisibleDate];
   [query whereKey:KEY_DATE lessThanOrEqualTo:self.calendarView.lastVisibleDate];
@@ -62,8 +68,35 @@
     }
 
     self.calendarEventGroup = objects;
-    [self.calendarView reload];
+
+    self.firstFetchedDate = self.calendarView.firstVisibleDate;
+    self.lastFetchedDate = self.calendarView.lastVisibleDate;
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self.calendarView reload];
+    });
   }];
+}
+
+- (BOOL)needToFetchEvents
+{
+  if (!self.firstFetchedDate) {
+    return true;
+  }
+
+  if (!self.lastFetchedDate) {
+    return true;
+  }
+
+  if (NSOrderedAscending == [self.calendarView.firstVisibleDate compare:self.firstFetchedDate]) {
+    return true;
+  }
+
+  if (NSOrderedDescending == [self.calendarView.lastVisibleDate compare:self.lastFetchedDate]) {
+    return true;
+  }
+
+  return false;
 }
 
 #pragma mark - Implement CKCalendarDataSource
@@ -87,12 +120,26 @@
 #pragma mark - Implement CKCalendarViewDelegate
 - (void)calendarView:(CKCalendarView *)calendarView willSelectDate:(NSDate *)date
 {
-
 }
 
 - (void)calendarView:(CKCalendarView *)calendarView didSelectDate:(NSDate *)date
 {
+  if ([self isSelectedDayOutOfFetchedRange:date]) {
+    [self fetchEventsForCalendar];
+  }
+}
 
+- (BOOL)isSelectedDayOutOfFetchedRange:(NSDate *)date
+{
+  if (NSOrderedAscending == [date compare:self.firstFetchedDate]) {
+    return true;
+  }
+
+  if (NSOrderedDescending == [date compare:self.lastFetchedDate]) {
+    return true;
+  }
+
+  return false;
 }
 
 @end

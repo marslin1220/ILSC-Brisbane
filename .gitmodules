@@ -1,3 +1,3 @@
 [submodule "MBCalendarKit"]
 	path = MBCalendarKit
-	url = https://github.com/MosheBerman/MBCalendarKit.git
+	url = git@github.com:marslin1220/MBCalendarKit.git

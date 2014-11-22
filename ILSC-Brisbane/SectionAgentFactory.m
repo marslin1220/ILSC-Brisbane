@@ -8,11 +8,11 @@
 
 #import "SectionAgentFactory.h"
 #import "WhatsOnAgent.h"
+#import "BasicInformationAgent.h"
 
 @interface SectionAgentFactory()
 
 @property (nonatomic) NSArray *sectionAgentGroup;
-@property (nonatomic) id<SectionAgent> whatsOnAgent;
 
 @end
 
@@ -23,20 +23,13 @@
 - (NSArray *)sectionAgentGroup
 {
   if (!_sectionAgentGroup) {
-    _sectionAgentGroup = @[self.whatsOnAgent];
+    _sectionAgentGroup = @[[WhatsOnAgent new], [BasicInformationAgent new]];
   }
 
   return _sectionAgentGroup;
 }
 
-- (id<SectionAgent>)whatsOnAgent
-{
-  if (!_whatsOnAgent) {
-    _whatsOnAgent = [WhatsOnAgent new];
-  }
-
-  return _whatsOnAgent;
-}
+#pragma mark - Factory Methods
 
 - (NSInteger)numberOfSectionAgents
 {

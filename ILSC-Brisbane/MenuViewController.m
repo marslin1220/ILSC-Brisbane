@@ -7,17 +7,29 @@
 //
 
 #import "MenuViewController.h"
-
-#define ILSC_BNE_COMMUNITY_TV_URL @"https://m.youtube.com/channel/UCUmXuPKvW5uLoXtLl9a5tDQ/videos"
-#define ILSC_COMMUNITY_TV_URL @"https://m.youtube.com/user/ilscTV/videos"
-#define ILSC_BLOG_URL @"http://blog.ilsc.com"
+#import "TableViewAgent.h"
+#import "WhatsOnAgent.h"
 
 @interface MenuViewController ()
+
+@property (nonatomic) id<TableViewSectionAgent> whatsOnAgent;
 
 @end
 
 @implementation MenuViewController
 
+#pragma mark - Member Initiation
+
+- (id<TableViewSectionAgent>)whatsOnAgent
+{
+  if (!_whatsOnAgent) {
+    _whatsOnAgent = [WhatsOnAgent new];
+  }
+
+  return _whatsOnAgent;
+}
+
+#pragma mark - View Life Cycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,25 +42,68 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table View Data Source
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+  return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+  NSInteger numberOfRows = 0;
+
+  switch (section) {
+    case 0: //What's on
+      numberOfRows = [self.whatsOnAgent tableView:tableView numberOfRowsInSection:section];
+      break;
+    case 1: // Information
+      numberOfRows = 3;
+      break;
+    case 2: // Userful link
+      numberOfRows = 3;
+      break;
+    case 3: // News
+      break;
+    case 4: // xxxx information
+      break;
+    case 5: // Who is who
+      break;
+    default:
+      break;
+  }
+
+  return numberOfRows;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+  switch (section) {
+    case 0:
+      [self.whatsOnAgent tableView:tableView titleForHeaderInSection:section];
+      break;
+
+    default:
+      break;
+  }
+  return nil;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  if (indexPath.section == 0) {
+    return [self.whatsOnAgent tableView:tableView cellForRowAtIndexPath:indexPath];
+
+  } else if (indexPath.section == 1){
+
+  }
+  return nil;
+}
+
+#pragma mark - Table View Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  UIApplication *applcation = [UIApplication sharedApplication];
-
   if (indexPath.section == 0) {
-    switch (indexPath.row) {
-      case 0:
-        [applcation openURL:[NSURL URLWithString:ILSC_BNE_COMMUNITY_TV_URL]];
-        break;
-      case 1:
-        [applcation openURL:[NSURL URLWithString:ILSC_COMMUNITY_TV_URL]];
-        break;
-      case 2:
-        [applcation openURL:[NSURL URLWithString:ILSC_BLOG_URL]];
-        break;
-      default:
-        break;
-    }
-
+    [self.whatsOnAgent tableView:tableView didSelectRowAtIndexPath:indexPath];
   }
 
   [self.tableView deselectRowAtIndexPath:indexPath animated:YES];

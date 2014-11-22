@@ -1,5 +1,5 @@
 //
-//  TableViewAgent.h
+//  SectionAgent.h
 //  ILSC-Brisbane
 //
 //  Created by 林 政龍 on 2014/11/22.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol TableViewSectionAgent <NSObject, UITableViewDataSource, UITableViewDelegate>
+@protocol SectionAgent <NSObject, UITableViewDataSource, UITableViewDelegate>
 
 @end

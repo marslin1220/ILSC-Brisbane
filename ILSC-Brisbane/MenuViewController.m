@@ -7,26 +7,24 @@
 //
 
 #import "MenuViewController.h"
-#import "TableViewAgent.h"
-#import "WhatsOnAgent.h"
+#import "SectionAgentFactory.h"
+#import "SectionAgent.h"
 
 @interface MenuViewController ()
 
-@property (nonatomic) id<TableViewSectionAgent> whatsOnAgent;
-
+@property (nonatomic) SectionAgentFactory *sectionAgentFactory;
 @end
 
 @implementation MenuViewController
 
 #pragma mark - Member Initiation
-
-- (id<TableViewSectionAgent>)whatsOnAgent
+- (SectionAgentFactory *)sectionAgentFactory
 {
-  if (!_whatsOnAgent) {
-    _whatsOnAgent = [WhatsOnAgent new];
+  if (!_sectionAgentFactory) {
+    _sectionAgentFactory = [SectionAgentFactory new];
   }
 
-  return _whatsOnAgent;
+  return _sectionAgentFactory;
 }
 
 #pragma mark - View Life Cycle
@@ -45,66 +43,44 @@
 #pragma mark - Table View Data Source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return 1;
+  return [self.sectionAgentFactory numberOfSectionAgents];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   NSInteger numberOfRows = 0;
 
-  switch (section) {
-    case 0: //What's on
-      numberOfRows = [self.whatsOnAgent tableView:tableView numberOfRowsInSection:section];
-      break;
-    case 1: // Information
-      numberOfRows = 3;
-      break;
-    case 2: // Userful link
-      numberOfRows = 3;
-      break;
-    case 3: // News
-      break;
-    case 4: // xxxx information
-      break;
-    case 5: // Who is who
-      break;
-    default:
-      break;
-  }
+  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:section];
+  numberOfRows = [sectionAgent tableView:tableView numberOfRowsInSection:section];
 
   return numberOfRows;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-  switch (section) {
-    case 0:
-      [self.whatsOnAgent tableView:tableView titleForHeaderInSection:section];
-      break;
+  NSString *title = nil;
 
-    default:
-      break;
-  }
-  return nil;
+  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:section];
+  title = [sectionAgent tableView:tableView titleForHeaderInSection:section];
+
+  return title;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (indexPath.section == 0) {
-    return [self.whatsOnAgent tableView:tableView cellForRowAtIndexPath:indexPath];
+  UITableViewCell *cell = nil;
 
-  } else if (indexPath.section == 1){
+  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:indexPath.section];
+  cell = [sectionAgent tableView:tableView cellForRowAtIndexPath:indexPath];
 
-  }
-  return nil;
+  return cell;
 }
 
 #pragma mark - Table View Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  if (indexPath.section == 0) {
-    [self.whatsOnAgent tableView:tableView didSelectRowAtIndexPath:indexPath];
-  }
+  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:indexPath.section];
+  [sectionAgent tableView:tableView didSelectRowAtIndexPath:indexPath];
 
   [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

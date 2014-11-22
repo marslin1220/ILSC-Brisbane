@@ -1,5 +1,5 @@
 //
-//  WhatsOnAgent.h
+//  SectionAgentFactory.h
 //  ILSC-Brisbane
 //
 //  Created by 林 政龍 on 2014/11/22.
@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "SectionAgent.h"
 
-@interface WhatsOnAgent : NSObject <SectionAgent>
+@interface SectionAgentFactory : NSObject
+
+- (NSInteger)numberOfSectionAgents;
+- (id<SectionAgent>)sectionAgentInSection:(NSInteger)section;
 
 @end

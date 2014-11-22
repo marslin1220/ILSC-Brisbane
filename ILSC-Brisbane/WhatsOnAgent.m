@@ -14,6 +14,18 @@
 
 @implementation WhatsOnAgent
 
+@synthesize tableViewController;
+
+- (id)initWithTableViewController:(UITableViewController *)tableVC
+{
+  self = [super init];
+  if (self) {
+    self.tableViewController = tableVC;
+  }
+
+  return self;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   return 3;

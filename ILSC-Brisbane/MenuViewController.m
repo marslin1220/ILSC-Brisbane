@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "SectionAgentFactory.h"
 #import "SectionAgent.h"
+#import "MapViewController.h"
 
 @interface MenuViewController ()
 
@@ -21,7 +22,7 @@
 - (SectionAgentFactory *)sectionAgentFactory
 {
   if (!_sectionAgentFactory) {
-    _sectionAgentFactory = [SectionAgentFactory new];
+    _sectionAgentFactory = [[SectionAgentFactory alloc] initWithTableViewController:self];
   }
 
   return _sectionAgentFactory;

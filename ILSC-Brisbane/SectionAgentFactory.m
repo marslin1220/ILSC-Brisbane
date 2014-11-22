@@ -20,10 +20,20 @@
 
 #pragma mark - Member Initiation
 
+- (id)initWithTableViewController:(UITableViewController *)tableViewController
+{
+  self = [super init];
+  if (self) {
+    self.tableViewController = tableViewController;
+  }
+
+  return self;
+}
+
 - (NSArray *)sectionAgentGroup
 {
   if (!_sectionAgentGroup) {
-    _sectionAgentGroup = @[[WhatsOnAgent new], [BasicInformationAgent new]];
+    _sectionAgentGroup = @[[[WhatsOnAgent alloc] initWithTableViewController:self.tableViewController], [[BasicInformationAgent alloc] initWithTableViewController:self.tableViewController]];
   }
 
   return _sectionAgentGroup;

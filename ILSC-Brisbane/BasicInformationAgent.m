@@ -7,8 +7,21 @@
 //
 
 #import "BasicInformationAgent.h"
+#import "MapViewController.h"
 
 @implementation BasicInformationAgent
+
+@synthesize tableViewController;
+
+- (id)initWithTableViewController:(UITableViewController *)tableVC
+{
+  self = [super init];
+  if (self) {
+    self.tableViewController = tableVC;
+  }
+
+  return self;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -56,7 +69,11 @@
 
   switch (indexPath.row) {
     case 0:
+    {
+      MapViewController *mapVC = [self.tableViewController.storyboard instantiateViewControllerWithIdentifier:@"map-view-controller"];
+      [self.tableViewController.navigationController pushViewController:mapVC animated:YES];
       break;
+    }
     case 1:
       break;
     case 2:

@@ -11,6 +11,9 @@
 
 @interface SectionAgentFactory : NSObject
 
+@property UITableViewController *tableViewController;
+
+- (id)initWithTableViewController:(UITableViewController *)tableViewController;
 - (NSInteger)numberOfSectionAgents;
 - (id<SectionAgent>)sectionAgentInSection:(NSInteger)section;
 

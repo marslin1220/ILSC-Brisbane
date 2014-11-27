@@ -109,7 +109,7 @@
         <!--Activity Calendar-->
         <scene sceneID="tKJ-bP-6rk">
             <objects>
-                <viewController id="Q4l-Wl-JfU" customClass="ActivitiCalendarViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="activity-view-controller" id="Q4l-Wl-JfU" customClass="ActivitiCalendarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vso-8i-63y"/>
                         <viewControllerLayoutGuide type="bottom" id="Uhh-YO-DGz"/>

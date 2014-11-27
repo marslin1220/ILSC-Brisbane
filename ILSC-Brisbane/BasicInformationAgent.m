@@ -7,8 +7,6 @@
 //
 
 #import "BasicInformationAgent.h"
-#import "MapViewController.h"
-#import "AcademicCalendarViewController.h"
 
 @implementation BasicInformationAgent
 
@@ -68,23 +66,25 @@
 {
   UIApplication *applcation = [UIApplication sharedApplication];
 
+  UIViewController *viewController = nil;
   switch (indexPath.row) {
     case 0:
-    {
-      MapViewController *mapVC = [self.tableViewController.storyboard instantiateViewControllerWithIdentifier:@"map-view-controller"];
-      [self.tableViewController.navigationController pushViewController:mapVC animated:YES];
+      viewController = [self.tableViewController.storyboard instantiateViewControllerWithIdentifier:@"map-view-controller"];
       break;
-    }
     case 1:
-    {
-      AcademicCalendarViewController *academicVC = [self.tableViewController.storyboard instantiateViewControllerWithIdentifier:@"academic-view-controller"];
-      [self.tableViewController.navigationController pushViewController:academicVC animated:YES];
+      viewController = [self.tableViewController.storyboard instantiateViewControllerWithIdentifier:@"academic-view-controller"];
       break;
-    }
     case 2:
+      viewController = [self.tableViewController.storyboard instantiateViewControllerWithIdentifier:@"activity-view-controller"];
+      break;
+    case 3:
       break;
     default:
       break;
+  }
+
+  if (viewController) {
+    [self.tableViewController.navigationController pushViewController:viewController animated:YES];
   }
 
   [tableView deselectRowAtIndexPath:indexPath animated:YES];

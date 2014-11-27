@@ -274,7 +274,7 @@
         <!--Academic Calendar-->
         <scene sceneID="DA2-Xp-LFB">
             <objects>
-                <viewController id="F1f-MA-drV" customClass="AcademicCalendarViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="academic-view-controller" id="F1f-MA-drV" customClass="AcademicCalendarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DMO-mH-W2v"/>
                         <viewControllerLayoutGuide type="bottom" id="A8Z-YF-h6K"/>

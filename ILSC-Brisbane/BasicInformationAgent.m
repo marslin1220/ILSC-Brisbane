@@ -8,6 +8,7 @@
 
 #import "BasicInformationAgent.h"
 #import "MapViewController.h"
+#import "AcademicCalendarViewController.h"
 
 @implementation BasicInformationAgent
 
@@ -75,7 +76,11 @@
       break;
     }
     case 1:
+    {
+      AcademicCalendarViewController *academicVC = [self.tableViewController.storyboard instantiateViewControllerWithIdentifier:@"academic-view-controller"];
+      [self.tableViewController.navigationController pushViewController:academicVC animated:YES];
       break;
+    }
     case 2:
       break;
     default:

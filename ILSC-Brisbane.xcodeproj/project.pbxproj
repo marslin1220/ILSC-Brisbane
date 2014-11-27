@@ -29,6 +29,8 @@
 		A22B968719AD85C700D3BDC4 /* CKCalendarViewControllerInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B967319AD85C700D3BDC4 /* CKCalendarViewControllerInternal.m */; };
 		A22B968A19ADCDF600D3BDC4 /* ActivitiCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */; };
 		A22B968D19AE147E00D3BDC4 /* AcademicCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */; };
+		A232F1C01A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A232F1BF1A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf */; };
+		A232F1C21A2761B200401DA1 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A232F1C11A2761B200401DA1 /* QuickLook.framework */; };
 		A23F3D0B1A2032F1001744E7 /* WhatsOnAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D0A1A2032F1001744E7 /* WhatsOnAgent.m */; };
 		A23F3D0F1A203BF7001744E7 /* SectionAgentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */; };
 		A23F3D121A204608001744E7 /* BasicInformationAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D111A204608001744E7 /* BasicInformationAgent.m */; };
@@ -126,6 +128,8 @@
 		A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiCalendarViewController.m; sourceTree = "<group>"; };
 		A22B968B19AE147D00D3BDC4 /* AcademicCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcademicCalendarViewController.h; sourceTree = "<group>"; };
 		A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcademicCalendarViewController.m; sourceTree = "<group>"; };
+		A232F1BF1A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Brisbane Schedule for Session 12 2014.pdf"; sourceTree = "<group>"; };
+		A232F1C11A2761B200401DA1 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		A23F3D091A2032F1001744E7 /* WhatsOnAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatsOnAgent.h; sourceTree = "<group>"; };
 		A23F3D0A1A2032F1001744E7 /* WhatsOnAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatsOnAgent.m; sourceTree = "<group>"; };
 		A23F3D0C1A203578001744E7 /* SectionAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionAgent.h; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A232F1C21A2761B200401DA1 /* QuickLook.framework in Frameworks */,
 				A297296A196CD83600790428 /* QuartzCore.framework in Frameworks */,
 				A2972970196CD85000790428 /* SystemConfiguration.framework in Frameworks */,
 				A297296E196CD84800790428 /* StoreKit.framework in Frameworks */,
@@ -343,6 +348,14 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		A232F1BE1A275E2300401DA1 /* PDFFile */ = {
+			isa = PBXGroup;
+			children = (
+				A232F1BF1A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf */,
+			);
+			name = PDFFile;
+			sourceTree = "<group>";
+		};
 		A23F3D081A20328B001744E7 /* TableViewSectionAgent */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +401,7 @@
 		A2B1E6841962D98E007E83B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A232F1C11A2761B200401DA1 /* QuickLook.framework */,
 				A297296F196CD85000790428 /* SystemConfiguration.framework */,
 				A297296D196CD84800790428 /* StoreKit.framework */,
 				A297296B196CD84000790428 /* Security.framework */,
@@ -410,6 +424,7 @@
 		A2B1E68B1962D98E007E83B0 /* ILSC-Brisbane */ = {
 			isa = PBXGroup;
 			children = (
+				A232F1BE1A275E2300401DA1 /* PDFFile */,
 				A23F3D081A20328B001744E7 /* TableViewSectionAgent */,
 				A22B963919AD859800D3BDC4 /* ThirdParty */,
 				A2ADA74B19760B9E008DC3F7 /* Utility */,
@@ -552,6 +567,7 @@
 				A2ADA7501976116B008DC3F7 /* ILSC-Brisbane-Official-Info.plist in Resources */,
 				A2B1E69E1962D98E007E83B0 /* Images.xcassets in Resources */,
 				A2B1E6901962D98E007E83B0 /* InfoPlist.strings in Resources */,
+				A232F1C01A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf in Resources */,
 				A2B1E6991962D98E007E83B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

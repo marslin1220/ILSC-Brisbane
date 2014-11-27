@@ -6,7 +6,12 @@
 //  Copyright (c) 2014年 marstudio. All rights reserved.
 //
 
+#import <QuickLook/QLPreviewController.h>
+
 #import "BasicInformationAgent.h"
+
+@interface BasicInformationAgent() <QLPreviewControllerDataSource>
+@end
 
 @implementation BasicInformationAgent
 
@@ -64,8 +69,6 @@
 #pragma mark - Table View Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  UIApplication *applcation = [UIApplication sharedApplication];
-
   UIViewController *viewController = nil;
   switch (indexPath.row) {
     case 0:
@@ -78,6 +81,11 @@
       viewController = [self.tableViewController.storyboard instantiateViewControllerWithIdentifier:@"activity-view-controller"];
       break;
     case 3:
+    {
+      QLPreviewController *previewController = [[QLPreviewController alloc] init] ;
+      previewController.dataSource = self;
+      viewController = previewController;
+    }
       break;
     default:
       break;
@@ -86,8 +94,24 @@
   if (viewController) {
     [self.tableViewController.navigationController pushViewController:viewController animated:YES];
   }
+}
 
-  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+#pragma mark - Quick Look Data Source
+
+- (NSInteger)numberOfPreviewItemsInPreviewController:(QLPreviewController *)controller
+{
+  return 1;
+}
+
+- (id <QLPreviewItem>)previewController:(QLPreviewController *)controller previewItemAtIndex:(NSInteger)index
+{
+  // Break the path into its components (filename and extension)
+  NSArray *fileComponents = [@"Brisbane Schedule for Session 12 2014.pdf" componentsSeparatedByString:@"."];
+
+  // Use the filename (index 0) and the extension (index 1) to get path
+  NSString *path = [[NSBundle mainBundle] pathForResource:[fileComponents objectAtIndex:0] ofType:[fileComponents objectAtIndex:1]];
+
+  return (id <QLPreviewItem>)[NSURL fileURLWithPath:path];
 }
 
 @end

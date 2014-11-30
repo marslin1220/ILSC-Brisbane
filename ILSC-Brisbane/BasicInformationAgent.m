@@ -29,7 +29,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return 4;
+  return 5;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -59,6 +59,9 @@
     case 3:
       cell.textLabel.text = NSLocalizedString(@"Session class schedule", nil);
       break;
+    case 4:
+      cell.textLabel.text = NSLocalizedString(@"Contact us", nil);
+      break;
     default:
       break;
   }
@@ -86,6 +89,9 @@
       previewController.dataSource = self;
       viewController = previewController;
     }
+      break;
+    case 4:
+      viewController = [self.tableViewController.storyboard instantiateViewControllerWithIdentifier:@"contact-us-view-controller"];
       break;
     default:
       break;

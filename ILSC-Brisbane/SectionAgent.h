@@ -11,6 +11,7 @@
 @protocol SectionAgent <NSObject, UITableViewDataSource, UITableViewDelegate>
 
 @property UITableViewController *tableViewController;
+
 - (id)initWithTableViewController:(UITableViewController *)tableViewController;
 
 @end

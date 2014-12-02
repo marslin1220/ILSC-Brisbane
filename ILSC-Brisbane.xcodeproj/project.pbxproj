@@ -29,6 +29,12 @@
 		A22B968719AD85C700D3BDC4 /* CKCalendarViewControllerInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B967319AD85C700D3BDC4 /* CKCalendarViewControllerInternal.m */; };
 		A22B968A19ADCDF600D3BDC4 /* ActivitiCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */; };
 		A22B968D19AE147E00D3BDC4 /* AcademicCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */; };
+		A232F1C01A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A232F1BF1A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf */; };
+		A232F1C21A2761B200401DA1 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A232F1C11A2761B200401DA1 /* QuickLook.framework */; };
+		A232F1D21A2B0BC700401DA1 /* ContactUsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A232F1D01A2B0BC700401DA1 /* ContactUsTableViewController.m */; };
+		A23F3D0B1A2032F1001744E7 /* WhatsOnAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D0A1A2032F1001744E7 /* WhatsOnAgent.m */; };
+		A23F3D0F1A203BF7001744E7 /* SectionAgentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */; };
+		A23F3D121A204608001744E7 /* BasicInformationAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D111A204608001744E7 /* BasicInformationAgent.m */; };
 		A297295E196CD7C000790428 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295D196CD7C000790428 /* Parse.framework */; };
 		A2972960196CD7FF00790428 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295F196CD7FF00790428 /* AudioToolbox.framework */; };
 		A2972962196CD80900790428 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2972961196CD80900790428 /* CFNetwork.framework */; };
@@ -123,6 +129,17 @@
 		A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiCalendarViewController.m; sourceTree = "<group>"; };
 		A22B968B19AE147D00D3BDC4 /* AcademicCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcademicCalendarViewController.h; sourceTree = "<group>"; };
 		A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcademicCalendarViewController.m; sourceTree = "<group>"; };
+		A232F1BF1A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Brisbane Schedule for Session 12 2014.pdf"; sourceTree = "<group>"; };
+		A232F1C11A2761B200401DA1 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		A232F1CF1A2B0BC700401DA1 /* ContactUsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsTableViewController.h; sourceTree = "<group>"; };
+		A232F1D01A2B0BC700401DA1 /* ContactUsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsTableViewController.m; sourceTree = "<group>"; };
+		A23F3D091A2032F1001744E7 /* WhatsOnAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatsOnAgent.h; sourceTree = "<group>"; };
+		A23F3D0A1A2032F1001744E7 /* WhatsOnAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatsOnAgent.m; sourceTree = "<group>"; };
+		A23F3D0C1A203578001744E7 /* SectionAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionAgent.h; sourceTree = "<group>"; };
+		A23F3D0D1A203BF7001744E7 /* SectionAgentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionAgentFactory.h; sourceTree = "<group>"; };
+		A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionAgentFactory.m; sourceTree = "<group>"; };
+		A23F3D101A204608001744E7 /* BasicInformationAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInformationAgent.h; sourceTree = "<group>"; };
+		A23F3D111A204608001744E7 /* BasicInformationAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInformationAgent.m; sourceTree = "<group>"; };
 		A297295D196CD7C000790428 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A297295F196CD7FF00790428 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A2972961196CD80900790428 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -167,6 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A232F1C21A2761B200401DA1 /* QuickLook.framework in Frameworks */,
 				A297296A196CD83600790428 /* QuartzCore.framework in Frameworks */,
 				A2972970196CD85000790428 /* SystemConfiguration.framework in Frameworks */,
 				A297296E196CD84800790428 /* StoreKit.framework in Frameworks */,
@@ -333,6 +351,28 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		A232F1BE1A275E2300401DA1 /* PDFFile */ = {
+			isa = PBXGroup;
+			children = (
+				A232F1BF1A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf */,
+			);
+			name = PDFFile;
+			sourceTree = "<group>";
+		};
+		A23F3D081A20328B001744E7 /* TableViewSectionAgent */ = {
+			isa = PBXGroup;
+			children = (
+				A23F3D0C1A203578001744E7 /* SectionAgent.h */,
+				A23F3D0D1A203BF7001744E7 /* SectionAgentFactory.h */,
+				A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */,
+				A23F3D091A2032F1001744E7 /* WhatsOnAgent.h */,
+				A23F3D0A1A2032F1001744E7 /* WhatsOnAgent.m */,
+				A23F3D101A204608001744E7 /* BasicInformationAgent.h */,
+				A23F3D111A204608001744E7 /* BasicInformationAgent.m */,
+			);
+			name = TableViewSectionAgent;
+			sourceTree = "<group>";
+		};
 		A2ADA74B19760B9E008DC3F7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +404,7 @@
 		A2B1E6841962D98E007E83B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A232F1C11A2761B200401DA1 /* QuickLook.framework */,
 				A297296F196CD85000790428 /* SystemConfiguration.framework */,
 				A297296D196CD84800790428 /* StoreKit.framework */,
 				A297296B196CD84000790428 /* Security.framework */,
@@ -386,6 +427,8 @@
 		A2B1E68B1962D98E007E83B0 /* ILSC-Brisbane */ = {
 			isa = PBXGroup;
 			children = (
+				A232F1BE1A275E2300401DA1 /* PDFFile */,
+				A23F3D081A20328B001744E7 /* TableViewSectionAgent */,
 				A22B963919AD859800D3BDC4 /* ThirdParty */,
 				A2ADA74B19760B9E008DC3F7 /* Utility */,
 				A2B1E6BC1962ECA2007E83B0 /* ViewController */,
@@ -441,6 +484,8 @@
 				A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */,
 				A29E83B119EF917B007E4CF0 /* InformationTableViewController.h */,
 				A29E83B219EF917B007E4CF0 /* InformationTableViewController.m */,
+				A232F1CF1A2B0BC700401DA1 /* ContactUsTableViewController.h */,
+				A232F1D01A2B0BC700401DA1 /* ContactUsTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -527,6 +572,7 @@
 				A2ADA7501976116B008DC3F7 /* ILSC-Brisbane-Official-Info.plist in Resources */,
 				A2B1E69E1962D98E007E83B0 /* Images.xcassets in Resources */,
 				A2B1E6901962D98E007E83B0 /* InfoPlist.strings in Resources */,
+				A232F1C01A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf in Resources */,
 				A2B1E6991962D98E007E83B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +598,7 @@
 				A22B967819AD85C700D3BDC4 /* NSCalendar+Ranges.m in Sources */,
 				A22B967F19AD85C700D3BDC4 /* UIView+Border.m in Sources */,
 				A22B968A19ADCDF600D3BDC4 /* ActivitiCalendarViewController.m in Sources */,
+				A23F3D0F1A203BF7001744E7 /* SectionAgentFactory.m in Sources */,
 				A22B968D19AE147E00D3BDC4 /* AcademicCalendarViewController.m in Sources */,
 				A22B967419AD85C700D3BDC4 /* NSCalendar+Components.m in Sources */,
 				A22B967E19AD85C700D3BDC4 /* UIView+AnimatedFrame.m in Sources */,
@@ -565,12 +612,15 @@
 				A22B967A19AD85C700D3BDC4 /* NSDate+Description.m in Sources */,
 				A2B1E69C1962D98E007E83B0 /* MenuViewController.m in Sources */,
 				A22B967519AD85C700D3BDC4 /* NSCalendar+DateComparison.m in Sources */,
+				A232F1D21A2B0BC700401DA1 /* ContactUsTableViewController.m in Sources */,
 				A22B967B19AD85C700D3BDC4 /* NSDateComponents+AllComponents.m in Sources */,
 				A2B1E6961962D98E007E83B0 /* AppDelegate.m in Sources */,
 				A22B967619AD85C700D3BDC4 /* NSCalendar+DateManipulation.m in Sources */,
 				A22B968519AD85C700D3BDC4 /* MBPolygonView.m in Sources */,
+				A23F3D0B1A2032F1001744E7 /* WhatsOnAgent.m in Sources */,
 				A22B968619AD85C700D3BDC4 /* CKCalendarViewController.m in Sources */,
 				A22B968719AD85C700D3BDC4 /* CKCalendarViewControllerInternal.m in Sources */,
+				A23F3D121A204608001744E7 /* BasicInformationAgent.m in Sources */,
 				A22B968219AD85C700D3BDC4 /* CKCalendarHeaderView.m in Sources */,
 				A2B1E6921962D98E007E83B0 /* main.m in Sources */,
 				A2B1E6BF1962ED4F007E83B0 /* MapViewController.m in Sources */,

@@ -9,12 +9,9 @@
 #import <Parse/Parse.h>
 
 #import "UsefulLinkAgent.h"
+#import "UsefulLinkItemTableViewController.h"
 
 #define CLASS_USEFUL_LINK_CATEGORY @"UsefulLinkCategory"
-#define CLASS_USEFUL_LINK_ITEM @"UsefulLinkItem"
-#define KEY_ITEM_TITLE @"itemTitle"
-#define KEY_ITEM_LINK @"itemLink"
-#define KEY_CATEGORY_ID @"category_objectId"
 #define KEY_CATEGORY_TITLE @"categoryTitle"
 
 @interface UsefulLinkAgent()
@@ -79,7 +76,10 @@
 #pragma mark - Table View Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+  UsefulLinkItemTableViewController *usefulLinkItemTVC = [self.tableViewController.storyboard instantiateViewControllerWithIdentifier:@"useful-link-item-view-controller"];
+  usefulLinkItemTVC.catetory = [self.categoryArray objectAtIndex:indexPath.row];
 
+  [self.tableViewController.navigationController pushViewController:usefulLinkItemTVC animated:YES];
 }
 
 @end

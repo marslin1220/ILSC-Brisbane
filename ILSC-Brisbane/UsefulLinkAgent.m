@@ -6,7 +6,22 @@
 //  Copyright (c) 2014年 marstudio. All rights reserved.
 //
 
+#import <Parse/Parse.h>
+
 #import "UsefulLinkAgent.h"
+
+#define CLASS_USEFUL_LINK_CATEGORY @"UsefulLinkCategory"
+#define CLASS_USEFUL_LINK_ITEM @"UsefulLinkItem"
+#define KEY_ITEM_TITLE @"itemTitle"
+#define KEY_ITEM_LINK @"itemLink"
+#define KEY_CATEGORY_ID @"category_objectId"
+#define KEY_CATEGORY_TITLE @"categoryTitle"
+
+@interface UsefulLinkAgent()
+
+@property NSArray *categoryArray;
+
+@end
 
 @implementation UsefulLinkAgent
 
@@ -26,7 +41,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return 5;
+  if (self.categoryArray) {
+    return [self.categoryArray count];
+  }
+
+  PFQuery *query = [PFQuery queryWithClassName:CLASS_USEFUL_LINK_CATEGORY];
+  [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    self.categoryArray = objects;
+    [self.tableViewController.tableView reloadData];
+  }];
+
+  return 0;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -41,6 +66,11 @@
 
   if (cell == nil) {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+  }
+
+  if ([self.categoryArray count] > indexPath.row) {
+    PFObject *dataObject = [self.categoryArray objectAtIndex:indexPath.row];
+    [cell.textLabel setText:dataObject[KEY_CATEGORY_TITLE]];
   }
 
   return cell;

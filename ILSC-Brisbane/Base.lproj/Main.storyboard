@@ -129,7 +129,7 @@
         <!--Information-->
         <scene sceneID="U8l-G4-df3">
             <objects>
-                <tableViewController id="kzX-sp-VlS" customClass="InformationTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="private-information-view-controller" id="kzX-sp-VlS" customClass="InformationTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pp3-5r-Y8o">
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

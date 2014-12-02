@@ -35,6 +35,8 @@
 		A23F3D0B1A2032F1001744E7 /* WhatsOnAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D0A1A2032F1001744E7 /* WhatsOnAgent.m */; };
 		A23F3D0F1A203BF7001744E7 /* SectionAgentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */; };
 		A23F3D121A204608001744E7 /* BasicInformationAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D111A204608001744E7 /* BasicInformationAgent.m */; };
+		A27FE40B1A2DD92D0068A31B /* UsefulLinkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */; };
+		A27FE40E1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */; };
 		A297295E196CD7C000790428 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295D196CD7C000790428 /* Parse.framework */; };
 		A2972960196CD7FF00790428 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295F196CD7FF00790428 /* AudioToolbox.framework */; };
 		A2972962196CD80900790428 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2972961196CD80900790428 /* CFNetwork.framework */; };
@@ -140,6 +142,10 @@
 		A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionAgentFactory.m; sourceTree = "<group>"; };
 		A23F3D101A204608001744E7 /* BasicInformationAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInformationAgent.h; sourceTree = "<group>"; };
 		A23F3D111A204608001744E7 /* BasicInformationAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInformationAgent.m; sourceTree = "<group>"; };
+		A27FE4091A2DD92D0068A31B /* UsefulLinkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkAgent.h; sourceTree = "<group>"; };
+		A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulLinkAgent.m; sourceTree = "<group>"; };
+		A27FE40C1A2DE7F00068A31B /* UsefulLinkItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkItemTableViewController.h; sourceTree = "<group>"; };
+		A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulLinkItemTableViewController.m; sourceTree = "<group>"; };
 		A297295D196CD7C000790428 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A297295F196CD7FF00790428 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A2972961196CD80900790428 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -369,6 +375,8 @@
 				A23F3D0A1A2032F1001744E7 /* WhatsOnAgent.m */,
 				A23F3D101A204608001744E7 /* BasicInformationAgent.h */,
 				A23F3D111A204608001744E7 /* BasicInformationAgent.m */,
+				A27FE4091A2DD92D0068A31B /* UsefulLinkAgent.h */,
+				A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */,
 			);
 			name = TableViewSectionAgent;
 			sourceTree = "<group>";
@@ -486,6 +494,8 @@
 				A29E83B219EF917B007E4CF0 /* InformationTableViewController.m */,
 				A232F1CF1A2B0BC700401DA1 /* ContactUsTableViewController.h */,
 				A232F1D01A2B0BC700401DA1 /* ContactUsTableViewController.m */,
+				A27FE40C1A2DE7F00068A31B /* UsefulLinkItemTableViewController.h */,
+				A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -612,8 +622,10 @@
 				A22B967A19AD85C700D3BDC4 /* NSDate+Description.m in Sources */,
 				A2B1E69C1962D98E007E83B0 /* MenuViewController.m in Sources */,
 				A22B967519AD85C700D3BDC4 /* NSCalendar+DateComparison.m in Sources */,
+				A27FE40E1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m in Sources */,
 				A232F1D21A2B0BC700401DA1 /* ContactUsTableViewController.m in Sources */,
 				A22B967B19AD85C700D3BDC4 /* NSDateComponents+AllComponents.m in Sources */,
+				A27FE40B1A2DD92D0068A31B /* UsefulLinkAgent.m in Sources */,
 				A2B1E6961962D98E007E83B0 /* AppDelegate.m in Sources */,
 				A22B967619AD85C700D3BDC4 /* NSCalendar+DateManipulation.m in Sources */,
 				A22B968519AD85C700D3BDC4 /* MBPolygonView.m in Sources */,

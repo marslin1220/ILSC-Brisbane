@@ -9,6 +9,7 @@
 #import "SectionAgentFactory.h"
 #import "WhatsOnAgent.h"
 #import "BasicInformationAgent.h"
+#import "UsefulLinkAgent.h"
 
 @interface SectionAgentFactory()
 
@@ -33,7 +34,7 @@
 - (NSArray *)sectionAgentGroup
 {
   if (!_sectionAgentGroup) {
-    _sectionAgentGroup = @[[[WhatsOnAgent alloc] initWithTableViewController:self.tableViewController], [[BasicInformationAgent alloc] initWithTableViewController:self.tableViewController]];
+    _sectionAgentGroup = @[[[WhatsOnAgent alloc] initWithTableViewController:self.tableViewController], [[BasicInformationAgent alloc] initWithTableViewController:self.tableViewController], [[UsefulLinkAgent alloc] initWithTableViewController:self.tableViewController]];
   }
 
   return _sectionAgentGroup;

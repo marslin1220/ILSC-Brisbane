@@ -14,6 +14,7 @@
 @interface MenuViewController ()
 
 @property (nonatomic) SectionAgentFactory *sectionAgentFactory;
+
 @end
 
 @implementation MenuViewController
@@ -32,13 +33,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+
+  self.sectionAgentFactory = nil;
 }
 
 #pragma mark - Table View Data Source

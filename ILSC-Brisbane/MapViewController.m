@@ -70,6 +70,15 @@
   return _locationManager;
 }
 
+- (void)didReceiveMemoryWarning
+{
+  [super didReceiveMemoryWarning];
+
+  self.propertyList = nil;
+  self.ilscBrisbaneMapItem = nil;
+  self.locationManager = nil;
+}
+
 #pragma mark - UI Life Cycle
 
 - (void)viewDidLoad

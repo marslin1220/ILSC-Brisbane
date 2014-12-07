@@ -15,11 +15,27 @@
 @implementation ContactUsTableViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+  [super didReceiveMemoryWarning];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  UIApplication *shareApplication = [UIApplication sharedApplication];
+
+  switch (indexPath.section) {
+    case 0:
+      [shareApplication openURL:[NSURL URLWithString:@"tel://(07)3220-0144"]];
+      break;
+    case 1:
+      [shareApplication openURL:[NSURL URLWithString:@"http://maps.apple.com/?q=ILSC-Brisbane"]];
+      break;
+    default:
+      break;
+  }
 }
 
 @end

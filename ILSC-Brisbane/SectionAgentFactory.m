@@ -11,6 +11,7 @@
 #import "BasicInformationAgent.h"
 #import "UsefulLinkAgent.h"
 #import "NewsItemAgent.h"
+#import "SecurityInformationAgent.h"
 
 @interface SectionAgentFactory()
 
@@ -35,7 +36,7 @@
 - (NSArray *)sectionAgentGroup
 {
   if (!_sectionAgentGroup) {
-    _sectionAgentGroup = @[[[WhatsOnAgent alloc] initWithTableViewController:self.tableViewController], [[BasicInformationAgent alloc] initWithTableViewController:self.tableViewController], [[UsefulLinkAgent alloc] initWithTableViewController:self.tableViewController], [[NewsItemAgent alloc] initWithTableViewController:self.tableViewController]];
+    _sectionAgentGroup = @[[[WhatsOnAgent alloc] initWithTableViewController:self.tableViewController], [[BasicInformationAgent alloc] initWithTableViewController:self.tableViewController], [[UsefulLinkAgent alloc] initWithTableViewController:self.tableViewController], [[NewsItemAgent alloc] initWithTableViewController:self.tableViewController], [[SecurityInformationAgent alloc] initWithTableViewController:self.tableViewController]];
   }
 
   return _sectionAgentGroup;

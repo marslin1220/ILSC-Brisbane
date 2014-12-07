@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A22059C61A347E6300E8058C /* NewsItemAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A22059C51A347E6300E8058C /* NewsItemAgent.m */; };
+		A22059CC1A34875E00E8058C /* SecurityInformationAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */; };
 		A22B967419AD85C700D3BDC4 /* NSCalendar+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B964019AD85C700D3BDC4 /* NSCalendar+Components.m */; };
 		A22B967519AD85C700D3BDC4 /* NSCalendar+DateComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B964219AD85C700D3BDC4 /* NSCalendar+DateComparison.m */; };
 		A22B967619AD85C700D3BDC4 /* NSCalendar+DateManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B964419AD85C700D3BDC4 /* NSCalendar+DateManipulation.m */; };
@@ -82,6 +83,8 @@
 /* Begin PBXFileReference section */
 		A22059C41A347E6300E8058C /* NewsItemAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItemAgent.h; sourceTree = "<group>"; };
 		A22059C51A347E6300E8058C /* NewsItemAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItemAgent.m; sourceTree = "<group>"; };
+		A22059CA1A34875E00E8058C /* SecurityInformationAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityInformationAgent.h; sourceTree = "<group>"; };
+		A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityInformationAgent.m; sourceTree = "<group>"; };
 		A22B963B19AD85C700D3BDC4 /* CalendarKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarKit.h; sourceTree = "<group>"; };
 		A22B963F19AD85C700D3BDC4 /* NSCalendar+Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+Components.h"; sourceTree = "<group>"; };
 		A22B964019AD85C700D3BDC4 /* NSCalendar+Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+Components.m"; sourceTree = "<group>"; };
@@ -382,6 +385,8 @@
 				A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */,
 				A22059C41A347E6300E8058C /* NewsItemAgent.h */,
 				A22059C51A347E6300E8058C /* NewsItemAgent.m */,
+				A22059CA1A34875E00E8058C /* SecurityInformationAgent.h */,
+				A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */,
 			);
 			name = TableViewSectionAgent;
 			sourceTree = "<group>";
@@ -641,6 +646,7 @@
 				A23F3D121A204608001744E7 /* BasicInformationAgent.m in Sources */,
 				A22B968219AD85C700D3BDC4 /* CKCalendarHeaderView.m in Sources */,
 				A2B1E6921962D98E007E83B0 /* main.m in Sources */,
+				A22059CC1A34875E00E8058C /* SecurityInformationAgent.m in Sources */,
 				A2B1E6BF1962ED4F007E83B0 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

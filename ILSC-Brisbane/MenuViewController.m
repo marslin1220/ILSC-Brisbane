@@ -82,7 +82,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:indexPath.section];
-  [sectionAgent tableView:tableView didSelectRowAtIndexPath:indexPath];
+  if ([sectionAgent respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+    [sectionAgent tableView:tableView didSelectRowAtIndexPath:indexPath];
+  }
 
   [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

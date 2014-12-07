@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.37254901959999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="static-cell" textLabel="nwZ-Ib-VBC" style="IBUITableViewCellStyleDefault" id="11B-cy-wJ4">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="non-accessory-cell" textLabel="nwZ-Ib-VBC" style="IBUITableViewCellStyleDefault" id="11B-cy-wJ4">
                                 <rect key="frame" x="0.0" y="284" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="11B-cy-wJ4" id="Q39-bO-arg">
@@ -32,7 +32,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.37254901960784315" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dynamic-cell" textLabel="FtH-de-btu" style="IBUITableViewCellStyleDefault" id="MJk-VD-2hw">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="disclosure-cell" textLabel="FtH-de-btu" style="IBUITableViewCellStyleDefault" id="MJk-VD-2hw">
                                 <rect key="frame" x="0.0" y="284" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MJk-VD-2hw" id="uMR-ga-Whw">

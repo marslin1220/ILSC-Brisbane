@@ -58,7 +58,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  NSString *cellIdentifier = @"dynamic-cell";
+  NSString *cellIdentifier = @"disclosure-cell";
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 
   if (cell == nil) {

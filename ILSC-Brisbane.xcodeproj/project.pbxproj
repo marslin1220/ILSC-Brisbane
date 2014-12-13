@@ -31,6 +31,7 @@
 		A22B968719AD85C700D3BDC4 /* CKCalendarViewControllerInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B967319AD85C700D3BDC4 /* CKCalendarViewControllerInternal.m */; };
 		A22B968A19ADCDF600D3BDC4 /* ActivitiCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */; };
 		A22B968D19AE147E00D3BDC4 /* AcademicCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */; };
+		A22CFB421A3CF9120011FE86 /* ActivityBookingAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A22CFB411A3CF9120011FE86 /* ActivityBookingAgent.m */; };
 		A232F1C01A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A232F1BF1A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf */; };
 		A232F1C21A2761B200401DA1 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A232F1C11A2761B200401DA1 /* QuickLook.framework */; };
 		A232F1D21A2B0BC700401DA1 /* ContactUsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A232F1D01A2B0BC700401DA1 /* ContactUsTableViewController.m */; };
@@ -137,6 +138,8 @@
 		A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiCalendarViewController.m; sourceTree = "<group>"; };
 		A22B968B19AE147D00D3BDC4 /* AcademicCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcademicCalendarViewController.h; sourceTree = "<group>"; };
 		A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcademicCalendarViewController.m; sourceTree = "<group>"; };
+		A22CFB401A3CF9120011FE86 /* ActivityBookingAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityBookingAgent.h; sourceTree = "<group>"; };
+		A22CFB411A3CF9120011FE86 /* ActivityBookingAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityBookingAgent.m; sourceTree = "<group>"; };
 		A232F1BF1A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Brisbane Schedule for Session 12 2014.pdf"; sourceTree = "<group>"; };
 		A232F1C11A2761B200401DA1 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		A232F1CF1A2B0BC700401DA1 /* ContactUsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsTableViewController.h; sourceTree = "<group>"; };
@@ -387,6 +390,8 @@
 				A22059C51A347E6300E8058C /* NewsItemAgent.m */,
 				A22059CA1A34875E00E8058C /* SecurityInformationAgent.h */,
 				A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */,
+				A22CFB401A3CF9120011FE86 /* ActivityBookingAgent.h */,
+				A22CFB411A3CF9120011FE86 /* ActivityBookingAgent.m */,
 			);
 			name = TableViewSectionAgent;
 			sourceTree = "<group>";
@@ -621,6 +626,7 @@
 				A23F3D0F1A203BF7001744E7 /* SectionAgentFactory.m in Sources */,
 				A22B968D19AE147E00D3BDC4 /* AcademicCalendarViewController.m in Sources */,
 				A22B967419AD85C700D3BDC4 /* NSCalendar+Components.m in Sources */,
+				A22CFB421A3CF9120011FE86 /* ActivityBookingAgent.m in Sources */,
 				A22B967E19AD85C700D3BDC4 /* UIView+AnimatedFrame.m in Sources */,
 				A2ADA74E19760BFC008DC3F7 /* PropertyListReader.m in Sources */,
 				A22B967C19AD85C700D3BDC4 /* NSString+Color.m in Sources */,

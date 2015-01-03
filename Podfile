@@ -5,7 +5,7 @@
 inhibit_all_warnings!
 
 target 'ILSC-Brisbane' do
-pod 'SWRevealViewController'
+pod 'SWRevealViewController', '~> 2.2.0'
 pod 'MBCalendarKit'
 pod 'Facebook-iOS-SDK'
 end

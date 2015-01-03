@@ -3,17 +3,17 @@ PODS:
   - Facebook-iOS-SDK (3.21.1):
     - Bolts (~> 1.0)
   - MBCalendarKit (2.2.7)
-  - SWRevealViewController (2.3.0)
+  - SWRevealViewController (2.2.0)
 
 DEPENDENCIES:
   - Facebook-iOS-SDK
   - MBCalendarKit
-  - SWRevealViewController
+  - SWRevealViewController (~> 2.2.0)
 
 SPEC CHECKSUMS:
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
   Facebook-iOS-SDK: 18c26e86ab25c17854a2ee2a8f60562099c6600f
   MBCalendarKit: ba833595ff81509d2c8b9be55ea6004360a02c66
-  SWRevealViewController: f6d80638b8e12323e87ac79562345403a799cb77
+  SWRevealViewController: 01120a17b7915206b79163c7c44cc64fcb0a6597
 
 COCOAPODS: 0.35.0

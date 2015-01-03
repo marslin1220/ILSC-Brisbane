@@ -10,6 +10,7 @@
 #import "SectionAgentFactory.h"
 #import "SectionAgent.h"
 #import "MapViewController.h"
+#import "SWRevealViewController.h"
 
 @interface MenuViewController ()
 
@@ -32,7 +33,11 @@
 #pragma mark - View Life Cycle
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
+
+  self.menuButton.target = self.revealViewController;
+  self.menuButton.action = @selector(revealToggle:);
+  [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning

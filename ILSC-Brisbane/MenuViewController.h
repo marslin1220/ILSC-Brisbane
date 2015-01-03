@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface MenuViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 
 @end

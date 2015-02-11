@@ -10,4 +10,6 @@
 
 @interface WhatsOnTableViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
+
 @end

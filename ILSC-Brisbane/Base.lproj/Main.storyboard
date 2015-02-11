@@ -388,8 +388,8 @@ Saturday	Closed</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="vGG-fq-p15" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegue" id="q5L-9d-e1r"/>
-                        <segue destination="jX0-IG-2gU" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegue" id="FIb-fy-NIR"/>
+                        <segue destination="vGG-fq-p15" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="Roh-ec-tMB"/>
+                        <segue destination="jX0-IG-2gU" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="c6C-Lb-Xeo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o46-Fu-hYM" userLabel="First Responder" sceneMemberID="firstResponder"/>

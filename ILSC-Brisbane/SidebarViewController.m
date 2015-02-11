@@ -41,13 +41,4 @@
   return cell;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-  NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-  UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
-
-  MenuViewController *menuViewController = [destViewController childViewControllers].firstObject;
-  menuViewController.selectedMenuItemIndex = indexPath.row;
-}
-
 @end

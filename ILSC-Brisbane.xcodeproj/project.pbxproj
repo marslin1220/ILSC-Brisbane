@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A22059C61A347E6300E8058C /* NewsItemAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A22059C51A347E6300E8058C /* NewsItemAgent.m */; };
 		A22059CC1A34875E00E8058C /* SecurityInformationAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */; };
 		A22B968A19ADCDF600D3BDC4 /* ActivitiCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */; };
 		A22B968D19AE147E00D3BDC4 /* AcademicCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */; };
@@ -19,6 +18,7 @@
 		A23F3D0F1A203BF7001744E7 /* SectionAgentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */; };
 		A23F3D121A204608001744E7 /* BasicInformationAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D111A204608001744E7 /* BasicInformationAgent.m */; };
 		A25D99711A8B3DCC00BA01CE /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99701A8B3DCC00BA01CE /* SidebarViewController.m */; };
+		A25D99741A8B598E00BA01CE /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99731A8B598E00BA01CE /* NewsTableViewController.m */; };
 		A27FE40B1A2DD92D0068A31B /* UsefulLinkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */; };
 		A27FE40E1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */; };
 		A297295E196CD7C000790428 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295D196CD7C000790428 /* Parse.framework */; };
@@ -66,8 +66,6 @@
 /* Begin PBXFileReference section */
 		1499562A24F20D250EEB2EC2 /* Pods-ILSC-Brisbane.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILSC-Brisbane.release.xcconfig"; path = "Pods/Target Support Files/Pods-ILSC-Brisbane/Pods-ILSC-Brisbane.release.xcconfig"; sourceTree = "<group>"; };
 		4E55CE255AA43F41E165A7FF /* Pods-ILSC-Brisbane.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILSC-Brisbane.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ILSC-Brisbane/Pods-ILSC-Brisbane.debug.xcconfig"; sourceTree = "<group>"; };
-		A22059C41A347E6300E8058C /* NewsItemAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItemAgent.h; sourceTree = "<group>"; };
-		A22059C51A347E6300E8058C /* NewsItemAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItemAgent.m; sourceTree = "<group>"; };
 		A22059CA1A34875E00E8058C /* SecurityInformationAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityInformationAgent.h; sourceTree = "<group>"; };
 		A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityInformationAgent.m; sourceTree = "<group>"; };
 		A22B968819ADCDF600D3BDC4 /* ActivitiCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiCalendarViewController.h; sourceTree = "<group>"; };
@@ -89,6 +87,8 @@
 		A23F3D111A204608001744E7 /* BasicInformationAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInformationAgent.m; sourceTree = "<group>"; };
 		A25D996F1A8B3DCC00BA01CE /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
 		A25D99701A8B3DCC00BA01CE /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		A25D99721A8B598E00BA01CE /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
+		A25D99731A8B598E00BA01CE /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
 		A27FE4091A2DD92D0068A31B /* UsefulLinkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkAgent.h; sourceTree = "<group>"; };
 		A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulLinkAgent.m; sourceTree = "<group>"; };
 		A27FE40C1A2DE7F00068A31B /* UsefulLinkItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkItemTableViewController.h; sourceTree = "<group>"; };
@@ -199,8 +199,6 @@
 				A23F3D111A204608001744E7 /* BasicInformationAgent.m */,
 				A27FE4091A2DD92D0068A31B /* UsefulLinkAgent.h */,
 				A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */,
-				A22059C41A347E6300E8058C /* NewsItemAgent.h */,
-				A22059C51A347E6300E8058C /* NewsItemAgent.m */,
 				A22059CA1A34875E00E8058C /* SecurityInformationAgent.h */,
 				A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */,
 				A22CFB401A3CF9120011FE86 /* ActivityBookingAgent.h */,
@@ -327,6 +325,8 @@
 				A232F1D01A2B0BC700401DA1 /* ContactUsTableViewController.m */,
 				A27FE40C1A2DE7F00068A31B /* UsefulLinkItemTableViewController.h */,
 				A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */,
+				A25D99721A8B598E00BA01CE /* NewsTableViewController.h */,
+				A25D99731A8B598E00BA01CE /* NewsTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -476,8 +476,8 @@
 				A2ADA74E19760BFC008DC3F7 /* PropertyListReader.m in Sources */,
 				A2B1E69C1962D98E007E83B0 /* MenuViewController.m in Sources */,
 				A27FE40E1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m in Sources */,
-				A22059C61A347E6300E8058C /* NewsItemAgent.m in Sources */,
 				A25D99711A8B3DCC00BA01CE /* SidebarViewController.m in Sources */,
+				A25D99741A8B598E00BA01CE /* NewsTableViewController.m in Sources */,
 				A232F1D21A2B0BC700401DA1 /* ContactUsTableViewController.m in Sources */,
 				A27FE40B1A2DD92D0068A31B /* UsefulLinkAgent.m in Sources */,
 				A2B1E6961962D98E007E83B0 /* AppDelegate.m in Sources */,

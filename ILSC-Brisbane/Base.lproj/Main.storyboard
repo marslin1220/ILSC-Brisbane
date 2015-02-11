@@ -5,6 +5,48 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--News-->
+        <scene sceneID="dJc-tC-AbT">
+            <objects>
+                <tableViewController id="fU1-ej-GnN" customClass="NewsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eCl-q7-wIB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="non-accessory-cell" textLabel="MzB-3h-lpH" style="IBUITableViewCellStyleDefault" id="afk-Xs-RIA">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="afk-Xs-RIA" id="aNB-vE-bOY">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MzB-3h-lpH">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fU1-ej-GnN" id="tCY-PJ-Gg2"/>
+                            <outlet property="delegate" destination="fU1-ej-GnN" id="T5j-Nj-mXy"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="News" id="36Y-8e-T5i">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Itp-34-j2C"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="menuButton" destination="Itp-34-j2C" id="bgO-0z-UP6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Qi-9v-JBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1375" y="-539"/>
+        </scene>
         <!--ILSC-Brisbane-->
         <scene sceneID="Gh8-9P-QoX">
             <objects>
@@ -90,7 +132,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmM-LK-yld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1357" y="-550"/>
+            <point key="canvasLocation" x="2363" y="-724"/>
         </scene>
         <!--Sidebar View Controller-->
         <scene sceneID="8GV-xf-vmT">
@@ -114,9 +156,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="jX0-IG-2gU" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="KaM-IF-Z6l"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="information" textLabel="4JV-ay-Mjw" style="IBUITableViewCellStyleDefault" id="91d-SB-gSu">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -131,9 +170,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="jX0-IG-2gU" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="SIO-5F-5j7"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="usefullink" textLabel="SG0-O3-77a" style="IBUITableViewCellStyleDefault" id="vNt-G6-EA7">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -148,9 +184,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="jX0-IG-2gU" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="p8e-he-A01"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="news" textLabel="tFB-qN-qQN" style="IBUITableViewCellStyleDefault" id="fpb-BI-RU1">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -166,7 +199,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="jX0-IG-2gU" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="nZR-ju-3hb"/>
+                                    <segue destination="wjz-qQ-3gc" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="pcr-Lx-xUw"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="xxxxinformation" textLabel="rLj-16-ris" style="IBUITableViewCellStyleDefault" id="ytp-zd-Y6R">
@@ -182,9 +215,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="jX0-IG-2gU" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="1IT-PI-pDL"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="activitybooking" textLabel="rP5-Ls-lip" style="IBUITableViewCellStyleDefault" id="doz-vJ-5Sn">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -199,9 +229,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="jX0-IG-2gU" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="cDQ-S8-dzh"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -256,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcr-hG-Xbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="307" y="813"/>
+            <point key="canvasLocation" x="307" y="314"/>
         </scene>
         <!--Activity Calendar-->
         <scene sceneID="tKJ-bP-6rk">
@@ -276,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOv-oY-xvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1336" y="813"/>
+            <point key="canvasLocation" x="1259" y="314"/>
         </scene>
         <!--Contact Us Table View Controller-->
         <scene sceneID="0yt-uO-SWJ">
@@ -404,7 +431,7 @@ Saturday	Closed</string>
                     </view>
                     <connections>
                         <segue destination="vGG-fq-p15" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="Roh-ec-tMB"/>
-                        <segue destination="jX0-IG-2gU" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="c6C-Lb-Xeo"/>
+                        <segue destination="wjz-qQ-3gc" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="erD-ls-1aa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o46-Fu-hYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -432,7 +459,7 @@ Saturday	Closed</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfn-xp-woa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810" y="-550"/>
+            <point key="canvasLocation" x="2363" y="-104"/>
         </scene>
         <!--Academic Calendar-->
         <scene sceneID="DA2-Xp-LFB">
@@ -452,7 +479,25 @@ Saturday	Closed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ty-OR-d3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="813"/>
+            <point key="canvasLocation" x="810" y="314"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="92E-Fy-aNm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wjz-qQ-3gc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4i8-FK-zx3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fU1-ej-GnN" kind="relationship" relationship="rootViewController" id="Koa-lo-qAy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oQ-29-vpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="-539"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -461,6 +506,6 @@ Saturday	Closed</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="KaM-IF-Z6l"/>
+        <segue reference="erD-ls-1aa"/>
     </inferredMetricsTieBreakers>
 </document>

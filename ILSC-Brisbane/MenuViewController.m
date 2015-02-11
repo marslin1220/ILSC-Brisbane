@@ -31,13 +31,35 @@
 }
 
 #pragma mark - View Life Cycle
+
+- (void)awakeFromNib
+{
+  self.selectedMenuItemIndex = 3;
+}
+
 - (void)viewDidLoad
 {
   [super viewDidLoad];
 
-  self.menuButton.target = self.revealViewController;
-  self.menuButton.action = @selector(revealToggle:);
-  [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+  [self setSidebarButtonAction];
+  [self setFrontTitle];
+}
+
+- (void)setSidebarButtonAction
+{
+  SWRevealViewController *revealViewController = self.revealViewController;
+  if (revealViewController)
+  {
+    self.menuButton.target = revealViewController;
+    self.menuButton.action = @selector(revealToggle:);
+    [self.view addGestureRecognizer:revealViewController.panGestureRecognizer];
+  }
+}
+
+- (void)setFrontTitle
+{
+  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:self.selectedMenuItemIndex];
+  self.title = [sectionAgent tableView:self.tableView titleForHeaderInSection:0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,34 +72,24 @@
 #pragma mark - Table View Data Source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return [self.sectionAgentFactory numberOfSectionAgents];
+  return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   NSInteger numberOfRows = 0;
 
-  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:section];
-  numberOfRows = [sectionAgent tableView:tableView numberOfRowsInSection:section];
+  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:self.selectedMenuItemIndex];
+  numberOfRows = [sectionAgent tableView:tableView numberOfRowsInSection:0];
 
   return numberOfRows;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-  NSString *title = nil;
-
-  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:section];
-  title = [sectionAgent tableView:tableView titleForHeaderInSection:section];
-
-  return title;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   UITableViewCell *cell = nil;
 
-  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:indexPath.section];
+  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:self.selectedMenuItemIndex];
   cell = [sectionAgent tableView:tableView cellForRowAtIndexPath:indexPath];
 
   return cell;
@@ -86,7 +98,7 @@
 #pragma mark - Table View Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:indexPath.section];
+  id<SectionAgent> sectionAgent = [self.sectionAgentFactory sectionAgentInSection:self.selectedMenuItemIndex];
   if ([sectionAgent respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
     [sectionAgent tableView:tableView didSelectRowAtIndexPath:indexPath];
   }

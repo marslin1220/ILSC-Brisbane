@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MenuViewController : UITableViewController
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
+@property (nonatomic) NSInteger selectedMenuItemIndex;
 
 @end

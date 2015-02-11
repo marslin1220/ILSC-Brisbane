@@ -7,7 +7,6 @@
 //
 
 #import "SectionAgentFactory.h"
-#import "BasicInformationAgent.h"
 #import "UsefulLinkAgent.h"
 #import "SecurityInformationAgent.h"
 #import "ActivityBookingAgent.h"
@@ -35,7 +34,7 @@
 - (NSArray *)sectionAgentGroup
 {
   if (!_sectionAgentGroup) {
-    _sectionAgentGroup = @[[[BasicInformationAgent alloc] initWithTableViewController:self.tableViewController], [[UsefulLinkAgent alloc] initWithTableViewController:self.tableViewController], [[SecurityInformationAgent alloc] initWithTableViewController:self.tableViewController], [[ActivityBookingAgent alloc] initWithTableViewController:self.tableViewController]];
+    _sectionAgentGroup = @[[[UsefulLinkAgent alloc] initWithTableViewController:self.tableViewController], [[SecurityInformationAgent alloc] initWithTableViewController:self.tableViewController], [[ActivityBookingAgent alloc] initWithTableViewController:self.tableViewController]];
   }
 
   return _sectionAgentGroup;

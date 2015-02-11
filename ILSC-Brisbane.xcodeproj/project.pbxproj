@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A22059CC1A34875E00E8058C /* SecurityInformationAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */; };
 		A22B968A19ADCDF600D3BDC4 /* ActivitiCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */; };
 		A22B968D19AE147E00D3BDC4 /* AcademicCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */; };
 		A22CFB421A3CF9120011FE86 /* ActivityBookingAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A22CFB411A3CF9120011FE86 /* ActivityBookingAgent.m */; };
@@ -20,6 +19,7 @@
 		A25D99771A8B5E3700BA01CE /* WhatsOnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99761A8B5E3700BA01CE /* WhatsOnTableViewController.m */; };
 		A25D997A1A8B61F400BA01CE /* BasicInforTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99791A8B61F400BA01CE /* BasicInforTableViewController.m */; };
 		A25D997D1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D997C1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m */; };
+		A25D99801A8B75C400BA01CE /* SecurityInforTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D997F1A8B75C400BA01CE /* SecurityInforTableViewController.m */; };
 		A27FE40E1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */; };
 		A297295E196CD7C000790428 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295D196CD7C000790428 /* Parse.framework */; };
 		A2972960196CD7FF00790428 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295F196CD7FF00790428 /* AudioToolbox.framework */; };
@@ -66,8 +66,6 @@
 /* Begin PBXFileReference section */
 		1499562A24F20D250EEB2EC2 /* Pods-ILSC-Brisbane.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILSC-Brisbane.release.xcconfig"; path = "Pods/Target Support Files/Pods-ILSC-Brisbane/Pods-ILSC-Brisbane.release.xcconfig"; sourceTree = "<group>"; };
 		4E55CE255AA43F41E165A7FF /* Pods-ILSC-Brisbane.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILSC-Brisbane.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ILSC-Brisbane/Pods-ILSC-Brisbane.debug.xcconfig"; sourceTree = "<group>"; };
-		A22059CA1A34875E00E8058C /* SecurityInformationAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityInformationAgent.h; sourceTree = "<group>"; };
-		A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityInformationAgent.m; sourceTree = "<group>"; };
 		A22B968819ADCDF600D3BDC4 /* ActivitiCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiCalendarViewController.h; sourceTree = "<group>"; };
 		A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiCalendarViewController.m; sourceTree = "<group>"; };
 		A22B968B19AE147D00D3BDC4 /* AcademicCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcademicCalendarViewController.h; sourceTree = "<group>"; };
@@ -91,6 +89,8 @@
 		A25D99791A8B61F400BA01CE /* BasicInforTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInforTableViewController.m; sourceTree = "<group>"; };
 		A25D997B1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkCategoryTableViewController.h; sourceTree = "<group>"; };
 		A25D997C1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulLinkCategoryTableViewController.m; sourceTree = "<group>"; };
+		A25D997E1A8B75C400BA01CE /* SecurityInforTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityInforTableViewController.h; sourceTree = "<group>"; };
+		A25D997F1A8B75C400BA01CE /* SecurityInforTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityInforTableViewController.m; sourceTree = "<group>"; };
 		A27FE40C1A2DE7F00068A31B /* UsefulLinkItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkItemTableViewController.h; sourceTree = "<group>"; };
 		A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulLinkItemTableViewController.m; sourceTree = "<group>"; };
 		A297295D196CD7C000790428 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -193,8 +193,6 @@
 				A23F3D0C1A203578001744E7 /* SectionAgent.h */,
 				A23F3D0D1A203BF7001744E7 /* SectionAgentFactory.h */,
 				A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */,
-				A22059CA1A34875E00E8058C /* SecurityInformationAgent.h */,
-				A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */,
 				A22CFB401A3CF9120011FE86 /* ActivityBookingAgent.h */,
 				A22CFB411A3CF9120011FE86 /* ActivityBookingAgent.m */,
 			);
@@ -327,6 +325,8 @@
 				A25D997C1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m */,
 				A27FE40C1A2DE7F00068A31B /* UsefulLinkItemTableViewController.h */,
 				A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */,
+				A25D997E1A8B75C400BA01CE /* SecurityInforTableViewController.h */,
+				A25D997F1A8B75C400BA01CE /* SecurityInforTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -482,9 +482,9 @@
 				A25D99741A8B598E00BA01CE /* NewsTableViewController.m in Sources */,
 				A232F1D21A2B0BC700401DA1 /* ContactUsTableViewController.m in Sources */,
 				A25D997A1A8B61F400BA01CE /* BasicInforTableViewController.m in Sources */,
+				A25D99801A8B75C400BA01CE /* SecurityInforTableViewController.m in Sources */,
 				A2B1E6961962D98E007E83B0 /* AppDelegate.m in Sources */,
 				A2B1E6921962D98E007E83B0 /* main.m in Sources */,
-				A22059CC1A34875E00E8058C /* SecurityInformationAgent.m in Sources */,
 				A2B1E6BF1962ED4F007E83B0 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

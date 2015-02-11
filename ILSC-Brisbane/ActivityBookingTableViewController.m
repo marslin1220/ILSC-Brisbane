@@ -1,37 +1,55 @@
 //
-//  ActivityBookingAgent.m
+//  ActivityBookingTableViewController.m
 //  ILSC-Brisbane
 //
-//  Created by 林 政龍 on 2014/12/14.
-//  Copyright (c) 2014年 marstudio. All rights reserved.
+//  Created by 林 政龍 on 2015/2/11.
+//  Copyright (c) 2015年 marstudio. All rights reserved.
 //
 
 #import <Parse/Parse.h>
 
-#import "ActivityBookingAgent.h"
+#import "ActivityBookingTableViewController.h"
+#import "SWRevealViewController.h"
 
 #define CLASS_ACTIVITY_BOOKING @"ActivityBooking"
 #define KEY_ACTIVITY_TITLE @"activityTitle"
 #define KEY_ACTIVITY_LINK @"activityLink"
 
-@interface ActivityBookingAgent ()
+@interface ActivityBookingTableViewController ()
 
 @property NSArray *activityArray;
 
 @end
 
-@implementation ActivityBookingAgent
+@implementation ActivityBookingTableViewController
 
-@synthesize tableViewController;
-
-- (id)initWithTableViewController:(UITableViewController *)tableVC
+- (void)viewDidLoad
 {
-  self = [super init];
-  if (self) {
-    self.tableViewController = tableVC;
-  }
+  [super viewDidLoad];
 
-  return self;
+  [self setSidebarButtonAction];
+}
+
+- (void)setSidebarButtonAction
+{
+  SWRevealViewController *revealViewController = self.revealViewController;
+  if (revealViewController)
+  {
+    self.menuButton.target = revealViewController;
+    self.menuButton.action = @selector(revealToggle:);
+    [self.view addGestureRecognizer:revealViewController.panGestureRecognizer];
+  }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+  return 1;
 }
 
 #pragma mark - TableView Data Source
@@ -45,17 +63,11 @@
   PFQuery *query = [PFQuery queryWithClassName:CLASS_ACTIVITY_BOOKING];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     self.activityArray = objects;
-    [self.tableViewController.tableView reloadData];
+    [self.tableView reloadData];
   }];
 
   return 0;
 }
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-  return NSLocalizedString(@"Activity booking", nil);
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   NSString *cellIdentifier = @"disclosure-cell";

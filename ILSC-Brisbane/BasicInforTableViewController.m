@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
 
   [self setSidebarButtonAction];
 }

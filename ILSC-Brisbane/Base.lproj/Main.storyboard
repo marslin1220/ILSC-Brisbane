@@ -263,6 +263,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="8dT-5X-lSg" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="I5s-HA-UGE"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="news" textLabel="tFB-qN-qQN" style="IBUITableViewCellStyleDefault" id="fpb-BI-RU1">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -319,7 +322,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="unA-Dr-m2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="307" y="-550"/>
+            <point key="canvasLocation" x="281" y="436"/>
         </scene>
         <!--Map-->
         <scene sceneID="TVh-D2-v5I">
@@ -382,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOv-oY-xvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905" y="390"/>
+            <point key="canvasLocation" x="2969" y="390"/>
         </scene>
         <!--Contact us-->
         <scene sceneID="0yt-uO-SWJ">
@@ -467,9 +470,9 @@ Saturday	Closed</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9a-kY-dxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905" y="747"/>
+            <point key="canvasLocation" x="2969" y="747"/>
         </scene>
-        <!--Useful Link Item Table View Controller-->
+        <!--Useful link-->
         <scene sceneID="TNZ-3c-JJ8">
             <objects>
                 <tableViewController storyboardIdentifier="useful-link-item-view-controller" id="tVW-UD-kkZ" customClass="UsefulLinkItemTableViewController" sceneMemberID="viewController">
@@ -491,10 +494,47 @@ Saturday	Closed</string>
                             <outlet property="delegate" destination="tVW-UD-kkZ" id="yry-gR-9oZ"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Useful link" id="Q0d-eL-QDJ"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DK3-k2-2BA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1371" y="1005"/>
+            <point key="canvasLocation" x="1903" y="817"/>
+        </scene>
+        <!--Useful link-->
+        <scene sceneID="y40-t4-Ehq">
+            <objects>
+                <tableViewController id="qL8-Za-rr1" customClass="UsefulLinkCategoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Xow-Ew-Hoo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="disclosure-cell" id="HiX-dd-8s1">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HiX-dd-8s1" id="Z0g-nI-rwd">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qL8-Za-rr1" id="be3-V8-5Qz"/>
+                            <outlet property="delegate" destination="qL8-Za-rr1" id="Qfq-SF-i8D"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Useful link" id="d6V-s8-VTF">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="8TR-W7-oOW"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="menuButton" destination="8TR-W7-oOW" id="Z45-X7-G6T"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SyH-Fh-ASt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1371" y="817"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="O3i-Rr-3vT">
@@ -727,6 +767,24 @@ Saturday	Closed</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ifw-ZR-Rgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="839" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MAj-jy-ChJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8dT-5X-lSg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="smc-Vc-udK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qL8-Za-rr1" kind="relationship" relationship="rootViewController" id="ZbX-ev-k3e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7At-O3-NsK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="817"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

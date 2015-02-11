@@ -7,6 +7,7 @@
 //
 
 #import "UsefulLinkItemTableViewController.h"
+#import "SWRevealViewController.h"
 
 #define CLASS_USEFUL_LINK_ITEM @"UsefulLinkItem"
 #define KEY_ITEM_TITLE @"itemTitle"
@@ -25,6 +26,11 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
+  [self loadUsefulLinkItem];
+}
+
+- (void)loadUsefulLinkItem
+{
   if (self.usefulLinkItemArray) {
     return;
   }

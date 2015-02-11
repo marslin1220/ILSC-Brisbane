@@ -19,7 +19,7 @@
 		A25D99741A8B598E00BA01CE /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99731A8B598E00BA01CE /* NewsTableViewController.m */; };
 		A25D99771A8B5E3700BA01CE /* WhatsOnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99761A8B5E3700BA01CE /* WhatsOnTableViewController.m */; };
 		A25D997A1A8B61F400BA01CE /* BasicInforTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99791A8B61F400BA01CE /* BasicInforTableViewController.m */; };
-		A27FE40B1A2DD92D0068A31B /* UsefulLinkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */; };
+		A25D997D1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D997C1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m */; };
 		A27FE40E1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */; };
 		A297295E196CD7C000790428 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295D196CD7C000790428 /* Parse.framework */; };
 		A2972960196CD7FF00790428 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295F196CD7FF00790428 /* AudioToolbox.framework */; };
@@ -89,8 +89,8 @@
 		A25D99761A8B5E3700BA01CE /* WhatsOnTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatsOnTableViewController.m; sourceTree = "<group>"; };
 		A25D99781A8B61F400BA01CE /* BasicInforTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInforTableViewController.h; sourceTree = "<group>"; };
 		A25D99791A8B61F400BA01CE /* BasicInforTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInforTableViewController.m; sourceTree = "<group>"; };
-		A27FE4091A2DD92D0068A31B /* UsefulLinkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkAgent.h; sourceTree = "<group>"; };
-		A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulLinkAgent.m; sourceTree = "<group>"; };
+		A25D997B1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkCategoryTableViewController.h; sourceTree = "<group>"; };
+		A25D997C1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulLinkCategoryTableViewController.m; sourceTree = "<group>"; };
 		A27FE40C1A2DE7F00068A31B /* UsefulLinkItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkItemTableViewController.h; sourceTree = "<group>"; };
 		A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulLinkItemTableViewController.m; sourceTree = "<group>"; };
 		A297295D196CD7C000790428 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -193,8 +193,6 @@
 				A23F3D0C1A203578001744E7 /* SectionAgent.h */,
 				A23F3D0D1A203BF7001744E7 /* SectionAgentFactory.h */,
 				A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */,
-				A27FE4091A2DD92D0068A31B /* UsefulLinkAgent.h */,
-				A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */,
 				A22059CA1A34875E00E8058C /* SecurityInformationAgent.h */,
 				A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */,
 				A22CFB401A3CF9120011FE86 /* ActivityBookingAgent.h */,
@@ -319,14 +317,16 @@
 				A29E83B219EF917B007E4CF0 /* InformationTableViewController.m */,
 				A232F1CF1A2B0BC700401DA1 /* ContactUsTableViewController.h */,
 				A232F1D01A2B0BC700401DA1 /* ContactUsTableViewController.m */,
-				A27FE40C1A2DE7F00068A31B /* UsefulLinkItemTableViewController.h */,
-				A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */,
 				A25D99721A8B598E00BA01CE /* NewsTableViewController.h */,
 				A25D99731A8B598E00BA01CE /* NewsTableViewController.m */,
 				A25D99751A8B5E3700BA01CE /* WhatsOnTableViewController.h */,
 				A25D99761A8B5E3700BA01CE /* WhatsOnTableViewController.m */,
 				A25D99781A8B61F400BA01CE /* BasicInforTableViewController.h */,
 				A25D99791A8B61F400BA01CE /* BasicInforTableViewController.m */,
+				A25D997B1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.h */,
+				A25D997C1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m */,
+				A27FE40C1A2DE7F00068A31B /* UsefulLinkItemTableViewController.h */,
+				A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -468,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25D997D1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m in Sources */,
 				A29E83B319EF917B007E4CF0 /* InformationTableViewController.m in Sources */,
 				A22B968A19ADCDF600D3BDC4 /* ActivitiCalendarViewController.m in Sources */,
 				A23F3D0F1A203BF7001744E7 /* SectionAgentFactory.m in Sources */,
@@ -480,7 +481,6 @@
 				A25D99771A8B5E3700BA01CE /* WhatsOnTableViewController.m in Sources */,
 				A25D99741A8B598E00BA01CE /* NewsTableViewController.m in Sources */,
 				A232F1D21A2B0BC700401DA1 /* ContactUsTableViewController.m in Sources */,
-				A27FE40B1A2DD92D0068A31B /* UsefulLinkAgent.m in Sources */,
 				A25D997A1A8B61F400BA01CE /* BasicInforTableViewController.m in Sources */,
 				A2B1E6961962D98E007E83B0 /* AppDelegate.m in Sources */,
 				A2B1E6921962D98E007E83B0 /* main.m in Sources */,

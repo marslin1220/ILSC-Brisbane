@@ -1,40 +1,56 @@
 //
-//  UsefulLinkAgent.m
+//  UsefulLinkCategoryTableViewController.m
 //  ILSC-Brisbane
 //
-//  Created by 林 政龍 on 2014/12/2.
-//  Copyright (c) 2014年 marstudio. All rights reserved.
+//  Created by 林 政龍 on 2015/2/11.
+//  Copyright (c) 2015年 marstudio. All rights reserved.
 //
 
 #import <Parse/Parse.h>
 
-#import "UsefulLinkAgent.h"
+#import "UsefulLinkCategoryTableViewController.h"
 #import "UsefulLinkItemTableViewController.h"
+#import "SWRevealViewController.h"
 
 #define CLASS_USEFUL_LINK_CATEGORY @"UsefulLinkCategory"
 #define KEY_CATEGORY_TITLE @"categoryTitle"
 
-@interface UsefulLinkAgent()
+@interface UsefulLinkCategoryTableViewController ()
 
 @property NSArray *categoryArray;
 
 @end
 
-@implementation UsefulLinkAgent
+@implementation UsefulLinkCategoryTableViewController
 
-@synthesize tableViewController;
+- (void)viewDidLoad {
+  [super viewDidLoad];
 
-- (id)initWithTableViewController:(UITableViewController *)tableVC
-{
-  self = [super init];
-  if (self) {
-    self.tableViewController = tableVC;
-  }
-
-  return self;
+  [self setSidebarButtonAction];
 }
 
-#pragma mark - TableView Data Source
+- (void)setSidebarButtonAction
+{
+  SWRevealViewController *revealViewController = self.revealViewController;
+  if (revealViewController)
+  {
+    self.menuButton.target = revealViewController;
+    self.menuButton.action = @selector(revealToggle:);
+    [self.view addGestureRecognizer:revealViewController.panGestureRecognizer];
+  }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -45,15 +61,10 @@
   PFQuery *query = [PFQuery queryWithClassName:CLASS_USEFUL_LINK_CATEGORY];
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     self.categoryArray = objects;
-    [self.tableViewController.tableView reloadData];
+    [self.tableView reloadData];
   }];
 
   return 0;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-  return NSLocalizedString(@"Useful Link", nil);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -76,10 +87,10 @@
 #pragma mark - Table View Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  UsefulLinkItemTableViewController *usefulLinkItemTVC = [self.tableViewController.storyboard instantiateViewControllerWithIdentifier:@"useful-link-item-view-controller"];
+  UsefulLinkItemTableViewController *usefulLinkItemTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"useful-link-item-view-controller"];
   usefulLinkItemTVC.catetory = [self.categoryArray objectAtIndex:indexPath.row];
 
-  [self.tableViewController.navigationController pushViewController:usefulLinkItemTVC animated:YES];
+  [self.navigationController pushViewController:usefulLinkItemTVC animated:YES];
 }
 
 @end

@@ -7,13 +7,13 @@
 //
 
 #import "SidebarViewController.h"
-#import "MenuViewController.h"
 
 @implementation SidebarViewController {
   NSArray *menuItems;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
   [super viewDidLoad];
 
   menuItems = @[@"whatison", @"information", @"usefullink", @"news", @"xxxxinformation", @"activitybooking"];

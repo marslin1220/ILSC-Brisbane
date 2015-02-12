@@ -255,10 +255,10 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TTx-h3-KEC">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TTx-h3-KEC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                             </mapView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsv-xH-p5p">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rsv-xH-p5p">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items/>
                                 <color key="barTintColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -266,20 +266,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.37254901959999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="TTx-h3-KEC" secondAttribute="centerY" constant="22" id="7Du-f4-22G"/>
-                            <constraint firstItem="TTx-h3-KEC" firstAttribute="width" secondItem="g6z-8Z-1Uq" secondAttribute="width" id="Kr9-iW-sef"/>
-                            <constraint firstItem="rsv-xH-p5p" firstAttribute="leading" secondItem="g6z-8Z-1Uq" secondAttribute="leading" id="LIf-46-FqM"/>
-                            <constraint firstItem="h48-Rn-0X4" firstAttribute="top" secondItem="rsv-xH-p5p" secondAttribute="bottom" id="XQA-D1-v0R"/>
-                            <constraint firstAttribute="trailing" secondItem="rsv-xH-p5p" secondAttribute="trailing" id="aiP-Rc-s3x"/>
-                            <constraint firstItem="TTx-h3-KEC" firstAttribute="height" secondItem="g6z-8Z-1Uq" secondAttribute="height" constant="-44" id="hvN-sP-HSJ"/>
-                            <constraint firstAttribute="centerX" secondItem="TTx-h3-KEC" secondAttribute="centerX" id="tbM-qA-RrM"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="WHa-KK-4Kp"/>
                     <connections>
                         <outlet property="mapView" destination="TTx-h3-KEC" id="6V8-mn-4DA"/>
-                        <outlet property="toolbar" destination="rsv-xH-p5p" id="Gn1-Eg-gfq"/>
+                        <outlet property="toolbar" destination="rsv-xH-p5p" id="Cjg-FW-JyY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcr-hG-Xbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -608,7 +599,7 @@ Saturday	Closed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ty-OR-d3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905" y="161"/>
+            <point key="canvasLocation" x="1905" y="579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="92E-Fy-aNm">
@@ -835,6 +826,6 @@ Saturday	Closed</string>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="erD-ls-1aa"/>
+        <segue reference="pcr-Lx-xUw"/>
     </inferredMetricsTieBreakers>
 </document>

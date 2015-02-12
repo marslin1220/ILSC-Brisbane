@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A22059C61A347E6300E8058C /* NewsItemAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A22059C51A347E6300E8058C /* NewsItemAgent.m */; };
-		A22059CC1A34875E00E8058C /* SecurityInformationAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */; };
 		A22B968A19ADCDF600D3BDC4 /* ActivitiCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */; };
 		A22B968D19AE147E00D3BDC4 /* AcademicCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */; };
-		A22CFB421A3CF9120011FE86 /* ActivityBookingAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A22CFB411A3CF9120011FE86 /* ActivityBookingAgent.m */; };
 		A232F1C01A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A232F1BF1A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf */; };
 		A232F1C21A2761B200401DA1 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A232F1C11A2761B200401DA1 /* QuickLook.framework */; };
 		A232F1D21A2B0BC700401DA1 /* ContactUsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A232F1D01A2B0BC700401DA1 /* ContactUsTableViewController.m */; };
-		A23F3D0B1A2032F1001744E7 /* WhatsOnAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D0A1A2032F1001744E7 /* WhatsOnAgent.m */; };
-		A23F3D0F1A203BF7001744E7 /* SectionAgentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */; };
-		A23F3D121A204608001744E7 /* BasicInformationAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A23F3D111A204608001744E7 /* BasicInformationAgent.m */; };
-		A27FE40B1A2DD92D0068A31B /* UsefulLinkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */; };
+		A25D99711A8B3DCC00BA01CE /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99701A8B3DCC00BA01CE /* SidebarViewController.m */; };
+		A25D99741A8B598E00BA01CE /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99731A8B598E00BA01CE /* NewsTableViewController.m */; };
+		A25D99771A8B5E3700BA01CE /* WhatsOnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99761A8B5E3700BA01CE /* WhatsOnTableViewController.m */; };
+		A25D997A1A8B61F400BA01CE /* BasicInforTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99791A8B61F400BA01CE /* BasicInforTableViewController.m */; };
+		A25D997D1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D997C1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m */; };
+		A25D99801A8B75C400BA01CE /* SecurityInforTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D997F1A8B75C400BA01CE /* SecurityInforTableViewController.m */; };
+		A25D99831A8B78D000BA01CE /* ActivityBookingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25D99821A8B78D000BA01CE /* ActivityBookingTableViewController.m */; };
 		A27FE40E1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */; };
 		A297295E196CD7C000790428 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295D196CD7C000790428 /* Parse.framework */; };
 		A2972960196CD7FF00790428 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297295F196CD7FF00790428 /* AudioToolbox.framework */; };
@@ -40,7 +40,6 @@
 		A2B1E6921962D98E007E83B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1E6911962D98E007E83B0 /* main.m */; };
 		A2B1E6961962D98E007E83B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1E6951962D98E007E83B0 /* AppDelegate.m */; };
 		A2B1E6991962D98E007E83B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2B1E6971962D98E007E83B0 /* Main.storyboard */; };
-		A2B1E69C1962D98E007E83B0 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B1E69B1962D98E007E83B0 /* MenuViewController.m */; };
 		A2B1E69E1962D98E007E83B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B1E69D1962D98E007E83B0 /* Images.xcassets */; };
 		A2B1E6A51962D98E007E83B0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1E6A41962D98E007E83B0 /* XCTest.framework */; };
 		A2B1E6A61962D98E007E83B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B1E6851962D98E007E83B0 /* Foundation.framework */; };
@@ -65,29 +64,28 @@
 /* Begin PBXFileReference section */
 		1499562A24F20D250EEB2EC2 /* Pods-ILSC-Brisbane.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILSC-Brisbane.release.xcconfig"; path = "Pods/Target Support Files/Pods-ILSC-Brisbane/Pods-ILSC-Brisbane.release.xcconfig"; sourceTree = "<group>"; };
 		4E55CE255AA43F41E165A7FF /* Pods-ILSC-Brisbane.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ILSC-Brisbane.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ILSC-Brisbane/Pods-ILSC-Brisbane.debug.xcconfig"; sourceTree = "<group>"; };
-		A22059C41A347E6300E8058C /* NewsItemAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItemAgent.h; sourceTree = "<group>"; };
-		A22059C51A347E6300E8058C /* NewsItemAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItemAgent.m; sourceTree = "<group>"; };
-		A22059CA1A34875E00E8058C /* SecurityInformationAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityInformationAgent.h; sourceTree = "<group>"; };
-		A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityInformationAgent.m; sourceTree = "<group>"; };
 		A22B968819ADCDF600D3BDC4 /* ActivitiCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiCalendarViewController.h; sourceTree = "<group>"; };
 		A22B968919ADCDF600D3BDC4 /* ActivitiCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiCalendarViewController.m; sourceTree = "<group>"; };
 		A22B968B19AE147D00D3BDC4 /* AcademicCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcademicCalendarViewController.h; sourceTree = "<group>"; };
 		A22B968C19AE147D00D3BDC4 /* AcademicCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcademicCalendarViewController.m; sourceTree = "<group>"; };
-		A22CFB401A3CF9120011FE86 /* ActivityBookingAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityBookingAgent.h; sourceTree = "<group>"; };
-		A22CFB411A3CF9120011FE86 /* ActivityBookingAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityBookingAgent.m; sourceTree = "<group>"; };
 		A232F1BF1A275EFD00401DA1 /* Brisbane Schedule for Session 12 2014.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Brisbane Schedule for Session 12 2014.pdf"; sourceTree = "<group>"; };
 		A232F1C11A2761B200401DA1 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		A232F1CF1A2B0BC700401DA1 /* ContactUsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactUsTableViewController.h; sourceTree = "<group>"; };
 		A232F1D01A2B0BC700401DA1 /* ContactUsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactUsTableViewController.m; sourceTree = "<group>"; };
-		A23F3D091A2032F1001744E7 /* WhatsOnAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatsOnAgent.h; sourceTree = "<group>"; };
-		A23F3D0A1A2032F1001744E7 /* WhatsOnAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatsOnAgent.m; sourceTree = "<group>"; };
-		A23F3D0C1A203578001744E7 /* SectionAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionAgent.h; sourceTree = "<group>"; };
-		A23F3D0D1A203BF7001744E7 /* SectionAgentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionAgentFactory.h; sourceTree = "<group>"; };
-		A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionAgentFactory.m; sourceTree = "<group>"; };
-		A23F3D101A204608001744E7 /* BasicInformationAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInformationAgent.h; sourceTree = "<group>"; };
-		A23F3D111A204608001744E7 /* BasicInformationAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInformationAgent.m; sourceTree = "<group>"; };
-		A27FE4091A2DD92D0068A31B /* UsefulLinkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkAgent.h; sourceTree = "<group>"; };
-		A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulLinkAgent.m; sourceTree = "<group>"; };
+		A25D996F1A8B3DCC00BA01CE /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		A25D99701A8B3DCC00BA01CE /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		A25D99721A8B598E00BA01CE /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
+		A25D99731A8B598E00BA01CE /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		A25D99751A8B5E3700BA01CE /* WhatsOnTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatsOnTableViewController.h; sourceTree = "<group>"; };
+		A25D99761A8B5E3700BA01CE /* WhatsOnTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatsOnTableViewController.m; sourceTree = "<group>"; };
+		A25D99781A8B61F400BA01CE /* BasicInforTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInforTableViewController.h; sourceTree = "<group>"; };
+		A25D99791A8B61F400BA01CE /* BasicInforTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInforTableViewController.m; sourceTree = "<group>"; };
+		A25D997B1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkCategoryTableViewController.h; sourceTree = "<group>"; };
+		A25D997C1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulLinkCategoryTableViewController.m; sourceTree = "<group>"; };
+		A25D997E1A8B75C400BA01CE /* SecurityInforTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityInforTableViewController.h; sourceTree = "<group>"; };
+		A25D997F1A8B75C400BA01CE /* SecurityInforTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityInforTableViewController.m; sourceTree = "<group>"; };
+		A25D99811A8B78D000BA01CE /* ActivityBookingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityBookingTableViewController.h; sourceTree = "<group>"; };
+		A25D99821A8B78D000BA01CE /* ActivityBookingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityBookingTableViewController.m; sourceTree = "<group>"; };
 		A27FE40C1A2DE7F00068A31B /* UsefulLinkItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulLinkItemTableViewController.h; sourceTree = "<group>"; };
 		A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulLinkItemTableViewController.m; sourceTree = "<group>"; };
 		A297295D196CD7C000790428 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -116,8 +114,6 @@
 		A2B1E6941962D98E007E83B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A2B1E6951962D98E007E83B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A2B1E6981962D98E007E83B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A2B1E69A1962D98E007E83B0 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		A2B1E69B1962D98E007E83B0 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		A2B1E69D1962D98E007E83B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A2B1E6A31962D98E007E83B0 /* ILSC-BrisbaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ILSC-BrisbaneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B1E6A41962D98E007E83B0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -184,28 +180,6 @@
 			name = PDFFile;
 			sourceTree = "<group>";
 		};
-		A23F3D081A20328B001744E7 /* TableViewSectionAgent */ = {
-			isa = PBXGroup;
-			children = (
-				A23F3D0C1A203578001744E7 /* SectionAgent.h */,
-				A23F3D0D1A203BF7001744E7 /* SectionAgentFactory.h */,
-				A23F3D0E1A203BF7001744E7 /* SectionAgentFactory.m */,
-				A23F3D091A2032F1001744E7 /* WhatsOnAgent.h */,
-				A23F3D0A1A2032F1001744E7 /* WhatsOnAgent.m */,
-				A23F3D101A204608001744E7 /* BasicInformationAgent.h */,
-				A23F3D111A204608001744E7 /* BasicInformationAgent.m */,
-				A27FE4091A2DD92D0068A31B /* UsefulLinkAgent.h */,
-				A27FE40A1A2DD92D0068A31B /* UsefulLinkAgent.m */,
-				A22059C41A347E6300E8058C /* NewsItemAgent.h */,
-				A22059C51A347E6300E8058C /* NewsItemAgent.m */,
-				A22059CA1A34875E00E8058C /* SecurityInformationAgent.h */,
-				A22059CB1A34875E00E8058C /* SecurityInformationAgent.m */,
-				A22CFB401A3CF9120011FE86 /* ActivityBookingAgent.h */,
-				A22CFB411A3CF9120011FE86 /* ActivityBookingAgent.m */,
-			);
-			name = TableViewSectionAgent;
-			sourceTree = "<group>";
-		};
 		A2ADA74B19760B9E008DC3F7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				A232F1BE1A275E2300401DA1 /* PDFFile */,
-				A23F3D081A20328B001744E7 /* TableViewSectionAgent */,
 				A2ADA74B19760B9E008DC3F7 /* Utility */,
 				A2B1E6BC1962ECA2007E83B0 /* ViewController */,
 				A2B1E6971962D98E007E83B0 /* Main.storyboard */,
@@ -308,8 +281,8 @@
 		A2B1E6BC1962ECA2007E83B0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A2B1E69A1962D98E007E83B0 /* MenuViewController.h */,
-				A2B1E69B1962D98E007E83B0 /* MenuViewController.m */,
+				A25D996F1A8B3DCC00BA01CE /* SidebarViewController.h */,
+				A25D99701A8B3DCC00BA01CE /* SidebarViewController.m */,
 				A2B1E6BD1962ED4F007E83B0 /* MapViewController.h */,
 				A2B1E6BE1962ED4F007E83B0 /* MapViewController.m */,
 				A22B968819ADCDF600D3BDC4 /* ActivitiCalendarViewController.h */,
@@ -320,8 +293,20 @@
 				A29E83B219EF917B007E4CF0 /* InformationTableViewController.m */,
 				A232F1CF1A2B0BC700401DA1 /* ContactUsTableViewController.h */,
 				A232F1D01A2B0BC700401DA1 /* ContactUsTableViewController.m */,
+				A25D99721A8B598E00BA01CE /* NewsTableViewController.h */,
+				A25D99731A8B598E00BA01CE /* NewsTableViewController.m */,
+				A25D99751A8B5E3700BA01CE /* WhatsOnTableViewController.h */,
+				A25D99761A8B5E3700BA01CE /* WhatsOnTableViewController.m */,
+				A25D99781A8B61F400BA01CE /* BasicInforTableViewController.h */,
+				A25D99791A8B61F400BA01CE /* BasicInforTableViewController.m */,
+				A25D997B1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.h */,
+				A25D997C1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m */,
 				A27FE40C1A2DE7F00068A31B /* UsefulLinkItemTableViewController.h */,
 				A27FE40D1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m */,
+				A25D997E1A8B75C400BA01CE /* SecurityInforTableViewController.h */,
+				A25D997F1A8B75C400BA01CE /* SecurityInforTableViewController.m */,
+				A25D99811A8B78D000BA01CE /* ActivityBookingTableViewController.h */,
+				A25D99821A8B78D000BA01CE /* ActivityBookingTableViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -463,22 +448,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25D997D1A8B70DC00BA01CE /* UsefulLinkCategoryTableViewController.m in Sources */,
+				A25D99831A8B78D000BA01CE /* ActivityBookingTableViewController.m in Sources */,
 				A29E83B319EF917B007E4CF0 /* InformationTableViewController.m in Sources */,
 				A22B968A19ADCDF600D3BDC4 /* ActivitiCalendarViewController.m in Sources */,
-				A23F3D0F1A203BF7001744E7 /* SectionAgentFactory.m in Sources */,
 				A22B968D19AE147E00D3BDC4 /* AcademicCalendarViewController.m in Sources */,
-				A22CFB421A3CF9120011FE86 /* ActivityBookingAgent.m in Sources */,
 				A2ADA74E19760BFC008DC3F7 /* PropertyListReader.m in Sources */,
-				A2B1E69C1962D98E007E83B0 /* MenuViewController.m in Sources */,
 				A27FE40E1A2DE7F00068A31B /* UsefulLinkItemTableViewController.m in Sources */,
-				A22059C61A347E6300E8058C /* NewsItemAgent.m in Sources */,
+				A25D99711A8B3DCC00BA01CE /* SidebarViewController.m in Sources */,
+				A25D99771A8B5E3700BA01CE /* WhatsOnTableViewController.m in Sources */,
+				A25D99741A8B598E00BA01CE /* NewsTableViewController.m in Sources */,
 				A232F1D21A2B0BC700401DA1 /* ContactUsTableViewController.m in Sources */,
-				A27FE40B1A2DD92D0068A31B /* UsefulLinkAgent.m in Sources */,
+				A25D997A1A8B61F400BA01CE /* BasicInforTableViewController.m in Sources */,
+				A25D99801A8B75C400BA01CE /* SecurityInforTableViewController.m in Sources */,
 				A2B1E6961962D98E007E83B0 /* AppDelegate.m in Sources */,
-				A23F3D0B1A2032F1001744E7 /* WhatsOnAgent.m in Sources */,
-				A23F3D121A204608001744E7 /* BasicInformationAgent.m in Sources */,
 				A2B1E6921962D98E007E83B0 /* main.m in Sources */,
-				A22059CC1A34875E00E8058C /* SecurityInformationAgent.m in Sources */,
 				A2B1E6BF1962ED4F007E83B0 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,8 +589,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Cheng Lung Lin (24WVC7HTYC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cheng Lung Lin (24WVC7HTYC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -615,7 +599,7 @@
 				GCC_PREFIX_HEADER = "ILSC-Brisbane/ILSC-Brisbane-Prefix.pch";
 				INFOPLIST_FILE = "ILSC-Brisbane/ILSC-Brisbane-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "51F95F2B-BA87-427A-81DB-8022F6B465C2";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -627,8 +611,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Cheng Lung Lin (24WVC7HTYC)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cheng Lung Lin (24WVC7HTYC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -637,7 +621,7 @@
 				GCC_PREFIX_HEADER = "ILSC-Brisbane/ILSC-Brisbane-Prefix.pch";
 				INFOPLIST_FILE = "ILSC-Brisbane/ILSC-Brisbane-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "51F95F2B-BA87-427A-81DB-8022F6B465C2";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

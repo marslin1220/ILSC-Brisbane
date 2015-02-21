@@ -599,7 +599,7 @@
 				GCC_PREFIX_HEADER = "ILSC-Brisbane/ILSC-Brisbane-Prefix.pch";
 				INFOPLIST_FILE = "ILSC-Brisbane/ILSC-Brisbane-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c243caed-f18e-474b-ac6e-48c412eed26f";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -621,7 +621,7 @@
 				GCC_PREFIX_HEADER = "ILSC-Brisbane/ILSC-Brisbane-Prefix.pch";
 				INFOPLIST_FILE = "ILSC-Brisbane/ILSC-Brisbane-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "2007c784-8852-4d24-8c05-2c699014bf2a";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
